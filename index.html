@@ -111,8 +111,47 @@
       flex: 1;
     }
 
+    /* HERO с фоном Торонто по бокам */
+
     .hero {
+      position: relative;
       padding: 40px 0 32px;
+      overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 40%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.45;
+      filter: blur(1.5px);
+      mix-blend-mode: screen;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero::before {
+      left: 0;
+      background-image:
+        linear-gradient(to right, rgba(10,3,16,0.97), rgba(10,3,16,0.45)),
+        url("images/toronto-left.jpg");
+    }
+
+    .hero::after {
+      right: 0;
+      background-image:
+        linear-gradient(to left, rgba(10,3,16,0.97), rgba(10,3,16,0.45)),
+        url("images/toronto-right.jpg");
+    }
+
+    .hero > .container {
+      position: relative;
+      z-index: 2;
     }
 
     .hero-grid {
@@ -358,6 +397,7 @@
     }
 
     /* Карточки "What we repair" с фоном техники */
+
     .card-bg {
       position: absolute;
       inset: 0;
@@ -404,7 +444,26 @@
       background-image: url("images/other-appliance.jpg");
     }
 
-    /* Steps */
+    /* Brands we work with */
+
+    .brands-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .brand-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(191, 191, 191, 0.4);
+      font-size: 12px;
+      color: var(--text-secondary);
+      background: rgba(24, 10, 25, 0.85);
+      backdrop-filter: blur(8px);
+      white-space: nowrap;
+    }
+
+    /* Steps – How it works */
 
     .steps {
       list-style: none;
@@ -513,47 +572,6 @@
       display: block;
       width: 100%;
       height: auto;
-    }
-
-    /* How it works – фон с фото Торонто по бокам */
-
-    #how-it-works {
-      position: relative;
-      overflow: hidden;
-    }
-
-    #how-it-works::before,
-    #how-it-works::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 40%;
-      background-size: cover;
-      background-position: center;
-      opacity: 0.22;
-      filter: blur(2px);
-      mix-blend-mode: screen;
-      pointer-events: none;
-    }
-
-    #how-it-works::before {
-      left: 0;
-      background-image:
-        linear-gradient(to right, rgba(10,3,16,0.95), rgba(10,3,16,0.4)),
-        url("images/toronto-left.jpg");
-    }
-
-    #how-it-works::after {
-      right: 0;
-      background-image:
-        linear-gradient(to left, rgba(10,3,16,0.95), rgba(10,3,16,0.4)),
-        url("images/toronto-right.jpg");
-    }
-
-    #how-it-works .container {
-      position: relative;
-      z-index: 1;
     }
 
     /* Modal form */
@@ -720,7 +738,7 @@
           </div>
           <div class="nav-cta">
             <div class="nav-socials">
-              <!-- Поменяй ссылки на свои реальные профили -->
+              <!-- Поменяй ссылки на реальные профили -->
               <a class="social-link" href="https://instagram.com/your_instagram" target="_blank" rel="noopener">
                 <span class="social-icon">📸</span><span>Instagram</span>
               </a>
@@ -737,7 +755,7 @@
     </header>
 
     <main>
-      <!-- Hero -->
+      <!-- HERO -->
       <section class="hero">
         <div class="container">
           <div class="hero-grid">
@@ -793,7 +811,7 @@
         </div>
       </section>
 
-      <!-- Services -->
+      <!-- What we repair -->
       <section id="services">
         <div class="container">
           <h2 class="section-title">What we repair</h2>
@@ -869,6 +887,33 @@
         </div>
       </section>
 
+      <!-- Brands we work with -->
+      <section id="brands">
+        <div class="container">
+          <h2 class="section-title">Brands we work with</h2>
+          <p class="section-muted">
+            We repair most major appliance brands. If you’re not sure about your unit – just send us a
+            photo of the model tag.
+          </p>
+          <div class="card">
+            <div class="brands-row">
+              <div class="brand-pill">Whirlpool</div>
+              <div class="brand-pill">Maytag</div>
+              <div class="brand-pill">KitchenAid</div>
+              <div class="brand-pill">Frigidaire</div>
+              <div class="brand-pill">GE / Hotpoint</div>
+              <div class="brand-pill">Samsung</div>
+              <div class="brand-pill">LG</div>
+              <div class="brand-pill">Bosch</div>
+              <div class="brand-pill">Electrolux</div>
+              <div class="brand-pill">Amana</div>
+              <div class="brand-pill">Inglis</div>
+              <div class="brand-pill">And more…</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Why us -->
       <section id="why-us">
         <div class="container">
@@ -923,7 +968,7 @@
           </p>
 
           <div class="grid grid-3 gallery-grid">
-            <!-- Заменишь src на свои фото в папке /images -->
+            <!-- Подставь свои фото в /images -->
             <div class="card gallery-card">
               <img src="images/fridge-repair.jpg" alt="Fridge repair example" class="gallery-img">
             </div>
@@ -941,7 +986,7 @@
               You can embed a short video with explanation or a quick before/after.
             </p>
             <div class="video-wrap">
-              <!-- Подставь сюда реальный YouTube ID или другой iframe -->
+              <!-- Подставь реальный YouTube ID -->
               <iframe
                 src="https://www.youtube.com/embed/VIDEO_ID"
                 title="LFI Appliance Repair – work example"
@@ -1004,7 +1049,7 @@
         </div>
       </section>
 
-      <!-- Service area & CTA + MAP -->
+      <!-- Service area & contact + MAP -->
       <section id="contact">
         <div class="container">
           <h2 class="section-title">Service area & contact</h2>
@@ -1035,7 +1080,7 @@
             </div>
           </div>
 
-          <!-- Стилизованная, более понятная карта покрытия GTA -->
+          <!-- Стилизованная карта покрытия GTA -->
           <div class="card map-card">
             <div class="card-title">GTA coverage – service map</div>
             <p class="card-text">
@@ -1245,7 +1290,6 @@
             © <span id="year"></span> LFI Appliance Repair · Leo Fix It · Toronto & GTA
           </div>
           <div class="social-links">
-            <!-- Те же соцсети в подвале -->
             <a class="social-link" href="https://instagram.com/your_instagram" target="_blank" rel="noopener">
               <span class="social-icon">📸</span><span>Instagram</span>
             </a>
@@ -1268,7 +1312,7 @@
         Leave your name and phone number. We’ll get back to you as soon as possible.
       </div>
 
-      <!-- Netlify form: submissions появятся в Netlify → Forms → callback -->
+      <!-- Netlify form -->
       <form name="callback" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="callback" />
 
