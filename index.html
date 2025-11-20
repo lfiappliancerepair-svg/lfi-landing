@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LFI Appliance Repair – Leo Fix It</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="LFI Appliance Repair – professional appliance repair with solid technical expertise across the GTA. Message us on WhatsApp to book a visit." />
+  <style>
+    :root {
+      --bg: #2A162B;
+      --bg-light: #3A2140;
+      --accent: #D9D9D9;
+      --accent-soft: rgba(217, 217, 217, 0.16);
+      --text: #FFFFFF;
+      --muted: #BFBFBF;
+      --card: #251125;
+      --border: #473051;
+      --radius: 16px;
+      --shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
+      --max-width: 960px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #3A2140, #2A162B 40%, #180A19 90%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      border-bottom: 1px solid rgba(191, 191, 191, 0.25);
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(23, 9, 25, 0.95), transparent);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 30% 20%, #FFFFFF, #D9D9D9 50%, #BFBFBF 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      color: #2A162B;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+    }
+
+    .logo-text-main {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .logo-text-sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: -2px;
+    }
+
+    .nav-cta {
+      font-size: 14px;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .hero {
+      padding: 40px 0 32px;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+        align-items: center;
+      }
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      background: rgba(24, 10, 25, 0.9);
+      border: 1px solid rgba(191, 191, 191, 0.45);
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(217, 217, 217, 0.2);
+    }
+
+    .hero-title {
+      font-size: clamp(30px, 5vw, 40px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .hero-list {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .hero-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .hero-list li span {
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: #2A162B;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: #D9D9D9;
+      color: #2A162B;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.6);
+      background: #FFFFFF;
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(191, 191, 191, 0.7);
+      background: rgba(24, 10, 25, 0.7);
+      color: var(--muted);
+    }
+
+    .btn-outline:hover {
+      background: rgba(24, 10, 25, 0.95);
+      color: #FFFFFF;
+    }
+
+    .cta-note {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top left, rgba(217, 217, 217, 0.12), var(--bg-light));
+      border-radius: 22px;
+      padding: 18px 18px 16px;
+      border: 1px solid rgba(191, 191, 191, 0.5);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card-title {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .hero-card-main {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero-card-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      border: 1px solid rgba(191, 191, 191, 0.5);
+      color: var(--muted);
+      background: rgba(24, 10, 25, 0.7);
+    }
+
+    .hero-card-footer {
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    section {
+      padding: 28px 0;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .section-muted {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    @media (min-width: 768px) {
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      background: rgba(24, 10, 25, 0.9);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 14px 14px 12px;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .card-text {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .card-tag {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .list-check {
+      list-style: none;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .list-check li {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .list-check li::before {
+      content: "✓";
+      font-size: 11px;
+      margin-top: 2px;
+      color: var(--accent);
+    }
+
+    .steps {
+      list-style: none;
+      font-size: 13px;
+      color: var(--muted);
+      counter-reset: step;
+    }
+
+    .steps li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 8px;
+      margin-bottom: 10px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(191, 191, 191, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: var(--muted);
+      background: rgba(24, 10, 25, 0.7);
+    }
+
+    .step-content-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(191, 191, 191, 0.3);
+      padding: 14px 0 18px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <div class="logo-mark">L</div>
+            <div>
+              <div class="logo-text-main">LFI Appliance Repair</div>
+              <div class="logo-text-sub">Leo Fix It – GTA</div>
+            </div>
+          </div>
+          <div class="nav-cta">
+            <a class="btn btn-outline" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair" target="_blank" rel="noopener">
+              Message on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <div class="badge">
+                <span class="badge-dot"></span>
+                Appliance repair with technical expertise across the GTA
+              </div>
+              <h1 class="hero-title">Reliable appliance repair with a solid technical approach.</h1>
+              <p class="hero-subtitle">
+                Fridges, washers, dryers, dishwashers, ovens and more. Professional diagnostics,
+                honest recommendations, and quality repairs for homes across the GTA.
+              </p>
+              <ul class="hero-list">
+                <li><span>✓</span> Engineer-level understanding of how your appliance works</li>
+                <li><span>✓</span> GTA coverage – Toronto and surrounding areas</li>
+                <li><span>✓</span> Clear communication and warranty on work</li>
+              </ul>
+              <div class="cta-row">
+                <a class="btn btn-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair" target="_blank" rel="noopener">
+                  Message us on WhatsApp
+                </a>
+                <a class="btn btn-outline" href="tel:+14374997971">
+                  Call: +1 (437) 499-7971
+                </a>
+              </div>
+              <div class="cta-note">
+                Fast response, real technician – send photos or videos of the issue for quicker help.
+              </div>
+            </div>
+
+            <div>
+              <div class="hero-card">
+                <div class="hero-card-title">LFI Appliance Repair · Leo Fix It</div>
+                <div class="hero-card-main">One technician, one point of contact, full responsibility.</div>
+                <div class="hero-card-pills">
+                  <div class="pill">Fridges & Freezers</div>
+                  <div class="pill">Washers & Dryers</div>
+                  <div class="pill">Dishwashers</div>
+                  <div class="pill">Ovens & Stoves</div>
+                  <div class="pill">Microwaves & Hoods</div>
+                </div>
+                <div class="hero-card-footer">
+                  <span>Serving Toronto & GTA</span>
+                  <span>Warranty on completed work</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services">
+        <div class="container">
+          <h2 class="section-title">What we repair</h2>
+          <p class="section-muted">
+            Most common household appliances. If you don’t see your unit here – send us a message,
+            we’ll let you know if we can help.
+          </p>
+          <div class="grid grid-3">
+            <div class="card">
+              <div class="card-title">Refrigerators & freezers</div>
+              <p class="card-text">
+                Not cooling, icing up, water leaks, strange noises – we diagnose the cause and offer
+                repair options.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-title">Washers & dryers</div>
+              <p class="card-text">
+                Not spinning, not draining, noisy operation, no heat, error codes – we focus on safe and
+                long-term solutions.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-title">Dishwashers</div>
+              <p class="card-text">
+                Poor cleaning, water left in the tub, leaks, strange noises – we locate the root cause,
+                not just reset the unit.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-title">Ovens, stoves & cooktops</div>
+              <p class="card-text">
+                No heat, uneven baking, burners not working – electric ranges and built-in ovens.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-title">Microwaves & range hoods</div>
+              <p class="card-text">
+                Light on but not heating, fan issues, control problems – we assess whether it’s worth repairing.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-title">Other appliances</div>
+              <p class="card-text">
+                Not sure if your appliance is covered? Message us on WhatsApp with a photo of the model tag.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why us -->
+      <section id="why-us">
+        <div class="container">
+          <h2 class="section-title">Why LFI Appliance Repair</h2>
+          <p class="section-muted">
+            Not just “parts changers”. We combine hands-on experience with a real technical mindset.
+          </p>
+          <div class="grid grid-2">
+            <div class="card">
+              <div class="card-tag">Technical approach</div>
+              <div class="card-title">Engineer-level diagnostics</div>
+              <p class="card-text">
+                We look at your appliance as a system, not just a set of parts. This means fewer “let’s try
+                replacing this” guesses and more precise repair decisions.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-tag">Transparency</div>
+              <div class="card-title">Honest recommendations</div>
+              <p class="card-text">
+                If a repair is not worth it, we’ll say so. You get clear explanations in simple language,
+                not technical jargon.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-tag">Coverage</div>
+              <div class="card-title">Toronto & GTA service</div>
+              <p class="card-text">
+                We serve Toronto and the Greater Toronto Area. If you’re not sure whether we cover your
+                area – just send a quick message.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-tag">Warranty</div>
+              <div class="card-title">We stand behind our work</div>
+              <p class="card-text">
+                Repairs come with a warranty on the work performed. Details depend on the type of repair
+                and parts used.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="how-it-works">
+        <div class="container">
+          <h2 class="section-title">How it works</h2>
+          <p class="section-muted">
+            Simple process – from your first message to a working appliance.
+          </p>
+          <ul class="steps">
+            <li>
+              <div class="step-num">1</div>
+              <div>
+                <div class="step-content-title">Message us on WhatsApp</div>
+                <div class="card-text">
+                  Describe what’s wrong and, if possible, send photos or a short video of the issue and the
+                  model tag.
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">2</div>
+              <div>
+                <div class="step-content-title">We confirm a time window</div>
+                <div class="card-text">
+                  You receive a time window for the visit and any preparation steps (for example, clearing
+                  space around the appliance).
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">3</div>
+              <div>
+                <div class="step-content-title">On-site diagnostics</div>
+                <div class="card-text">
+                  We identify the cause of the problem and explain the options, including repair cost and
+                  approximate time.
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">4</div>
+              <div>
+                <div class="step-content-title">Repair & warranty</div>
+                <div class="card-text">
+                  We complete the repair and provide a warranty on the work. If parts are needed, we discuss
+                  timelines and pricing beforehand.
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Service area & CTA -->
+      <section id="contact">
+        <div class="container">
+          <h2 class="section-title">Service area</h2>
+          <p class="section-muted">
+            We serve Toronto and the Greater Toronto Area (GTA). If you’re not sure whether your address is
+            covered, send us a quick message with your postal code.
+          </p>
+
+          <div class="card" style="margin-bottom: 16px;">
+            <div class="card-title">Ready to fix your appliance?</div>
+            <p class="card-text" style="margin-bottom: 10px;">
+              Click the button below and tell us what’s going on. You can send photos, videos, or an error
+              code so we can come prepared.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair" target="_blank" rel="noopener">
+                Message us on WhatsApp
+              </a>
+              <a class="btn btn-outline" href="tel:+14374997971">
+                Call: +1 (437) 499-7971
+              </a>
+            </div>
+            <div class="cta-note">
+              Prefer texting instead of calling? WhatsApp is the fastest way to reach us.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div>© <span id="year"></span> LFI Appliance Repair · Leo Fix It · Toronto & GTA</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
