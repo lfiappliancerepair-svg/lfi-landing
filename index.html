@@ -35,10 +35,57 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #3A2140, #2A162B 40%, #180A19 90%);
-      color: var(--text-primary);
-      line-height: 1.6;
+      body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #3A2140, #2A162B 40%, #180A19 90%);
+  color: var(--text-primary);
+  line-height: 1.6;
+  position: relative;
+  overflow-x: hidden; /* важно — убирает горизонтальный скролл */
+}
+
+/* ФОНОВЫЕ БОКОВЫЕ ПАНЕЛИ ТОРONTO — ИМЕННО В GUTTERS */
+body::before,
+body::after {
+  content: "";
+  position: fixed;    /* фиксированно по краям */
+  top: 0;
+  bottom: 0;
+  width: 22vw;        /* ширина боковых панелей */
+  max-width: 260px;   /* ограничение на больших экранах */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.45;
+  filter: blur(1.2px);
+  pointer-events: none;
+  z-index: -1;        /* позади всей страницы */
+  mix-blend-mode: screen; /* красивый эффект смешивания */
+}
+
+/* ЛЕВАЯ СТОРОНА */
+body::before {
+  left: 0;
+  background-image:
+    linear-gradient(to right, rgba(10,3,16,0.97), rgba(10,3,16,0.45)),
+    url("images/toronto-left.jpg");
+}
+
+/* ПРАВАЯ СТОРОНА */
+body::after {
+  right: 0;
+  background-image:
+    linear-gradient(to left, rgba(10,3,16,0.97), rgba(10,3,16,0.45)),
+    url("images/toronto-right.jpg");
+}
+
+/* На телефонах боковые панели отключаем */
+@media (max-width: 640px) {
+  body::before,
+  body::after {
+    display: none;
+  }
+}
+
     }
 
     .page {
@@ -133,20 +180,6 @@
       mix-blend-mode: screen;
       pointer-events: none;
       z-index: 1;
-    }
-
-    .hero::before {
-      left: 0;
-      background-image:
-        linear-gradient(to right, rgba(10,3,16,0.97), rgba(10,3,16,0.45)),
-        url("images/toronto-left.jpg");
-    }
-
-    .hero::after {
-      right: 0;
-      background-image:
-        linear-gradient(to left, rgba(10,3,16,0.97), rgba(10,3,16,0.45)),
-        url("images/toronto-right.jpg");
     }
 
     .hero > .container {
