@@ -60,6 +60,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 12px 0;
+      gap: 16px;
     }
 
     .logo {
@@ -94,7 +95,21 @@
     }
 
     .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       font-size: 14px;
+    }
+
+    .nav-socials {
+      display: none;
+    }
+
+    @media (min-width: 640px) {
+      .nav-socials {
+        display: flex;
+        gap: 8px;
+      }
     }
 
     main {
@@ -223,6 +238,16 @@
       color: #FFFFFF;
     }
 
+    .btn-ghost {
+      border: 1px dashed rgba(191, 191, 191, 0.5);
+      background: transparent;
+      color: var(--muted);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(24, 10, 25, 0.7);
+    }
+
     .cta-note {
       font-size: 12px;
       color: var(--muted);
@@ -328,25 +353,6 @@
       letter-spacing: 0.08em;
     }
 
-    .list-check {
-      list-style: none;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .list-check li {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 6px;
-    }
-
-    .list-check li::before {
-      content: "✓";
-      font-size: 11px;
-      margin-top: 2px;
-      color: var(--accent);
-    }
-
     .steps {
       list-style: none;
       font-size: 13px;
@@ -381,6 +387,178 @@
       margin-bottom: 2px;
     }
 
+    /* Gallery */
+
+    .gallery-grid {
+      margin-bottom: 16px;
+    }
+
+    .gallery-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .gallery-img {
+      display: block;
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    @media (min-width: 768px) {
+      .gallery-img {
+        height: 200px;
+      }
+    }
+
+    .video-card {
+      margin-top: 8px;
+    }
+
+    .video-wrap {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: #000;
+    }
+
+    .video-wrap iframe,
+    .video-wrap video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Map */
+
+    .map-card {
+      margin-top: 14px;
+    }
+
+    .map-wrap {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      border-radius: 22px;
+      border: 2px solid #c29cff; /* приятная фиолетовая линия */
+      overflow: hidden;
+      box-shadow: 0 18px 35px rgba(0, 0, 0, 0.6);
+      margin-top: 10px;
+    }
+
+    .map-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Modal form */
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 40;
+    }
+
+    .modal.is-open {
+      display: flex;
+    }
+
+    .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+    }
+
+    .modal-dialog {
+      position: relative;
+      z-index: 41;
+      width: 100%;
+      max-width: 420px;
+      background: rgba(24, 10, 25, 0.98);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 18px 18px 16px;
+    }
+
+    .modal-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .modal-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .field-label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+
+    .input,
+    .textarea {
+      width: 100%;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(24, 10, 25, 0.9);
+      color: var(--text);
+      padding: 8px 11px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .textarea {
+      border-radius: 12px;
+      min-height: 70px;
+      resize: vertical;
+    }
+
+    .input::placeholder,
+    .textarea::placeholder {
+      color: #7c6c85;
+    }
+
+    .form-note {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* Footer + socials */
+
     footer {
       border-top: 1px solid rgba(191, 191, 191, 0.3);
       padding: 14px 0 18px;
@@ -388,13 +566,47 @@
       color: var(--muted);
     }
 
-    footer a {
-      color: var(--muted);
-      text-decoration: none;
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
 
-    footer a:hover {
-      text-decoration: underline;
+    @media (min-width: 640px) {
+      .footer-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(191, 191, 191, 0.4);
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 12px;
+      background: rgba(24, 10, 25, 0.8);
+    }
+
+    .social-link:hover {
+      background: rgba(24, 10, 25, 0.95);
+      color: #ffffff;
+    }
+
+    .social-icon {
+      font-size: 14px;
     }
   </style>
 </head>
@@ -411,8 +623,17 @@
             </div>
           </div>
           <div class="nav-cta">
+            <div class="nav-socials">
+              <!-- Поменяй ссылки на свои реальные профили -->
+              <a class="social-link" href="https://instagram.com/your_instagram" target="_blank" rel="noopener">
+                <span class="social-icon">📸</span><span>Instagram</span>
+              </a>
+              <a class="social-link" href="https://facebook.com/your_facebook" target="_blank" rel="noopener">
+                <span class="social-icon">👍</span><span>Facebook</span>
+              </a>
+            </div>
             <a class="btn btn-outline" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair" target="_blank" rel="noopener">
-              Message on WhatsApp
+              WhatsApp
             </a>
           </div>
         </div>
@@ -446,6 +667,9 @@
                 <a class="btn btn-outline" href="tel:+14374997971">
                   Call: +1 (437) 499-7971
                 </a>
+                <button class="btn btn-ghost" type="button" onclick="openModal()">
+                  Request a callback
+                </button>
               </div>
               <div class="cta-note">
                 Fast response, real technician – send photos or videos of the issue for quicker help.
@@ -569,6 +793,46 @@
         </div>
       </section>
 
+      <!-- Gallery -->
+      <section id="gallery">
+        <div class="container">
+          <h2 class="section-title">Photos & video of our work</h2>
+          <p class="section-muted">
+            A few examples of real jobs – so you can see the level of work and attention to detail.
+            Replace these placeholders with your own photos when ready.
+          </p>
+
+          <div class="grid grid-3 gallery-grid">
+            <!-- Заменишь src на свои фото в папке /images -->
+            <div class="card gallery-card">
+              <img src="images/fridge-repair.jpg" alt="Fridge repair example" class="gallery-img">
+            </div>
+            <div class="card gallery-card">
+              <img src="images/washer-repair.jpg" alt="Washer repair example" class="gallery-img">
+            </div>
+            <div class="card gallery-card">
+              <img src="images/oven-repair.jpg" alt="Oven repair example" class="gallery-img">
+            </div>
+          </div>
+
+          <div class="card video-card">
+            <div class="card-title">Short video from a real job</div>
+            <p class="card-text" style="margin-bottom: 8px;">
+              You can embed a short video with explanation or a quick before/after.
+            </p>
+            <div class="video-wrap">
+              <!-- Подставь сюда реальный YouTube ID или другой iframe -->
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                title="LFI Appliance Repair – work example"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- How it works -->
       <section id="how-it-works">
         <div class="container">
@@ -621,10 +885,10 @@
         </div>
       </section>
 
-      <!-- Service area & CTA -->
+      <!-- Service area & CTA + MAP -->
       <section id="contact">
         <div class="container">
-          <h2 class="section-title">Service area</h2>
+          <h2 class="section-title">Service area & contact</h2>
           <p class="section-muted">
             We serve Toronto and the Greater Toronto Area (GTA). If you’re not sure whether your address is
             covered, send us a quick message with your postal code.
@@ -634,7 +898,7 @@
             <div class="card-title">Ready to fix your appliance?</div>
             <p class="card-text" style="margin-bottom: 10px;">
               Click the button below and tell us what’s going on. You can send photos, videos, or an error
-              code so we can come prepared.
+              code so we can come prepared. Or fill in the callback form.
             </p>
             <div class="cta-row">
               <a class="btn btn-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair" target="_blank" rel="noopener">
@@ -643,9 +907,28 @@
               <a class="btn btn-outline" href="tel:+14374997971">
                 Call: +1 (437) 499-7971
               </a>
+              <button class="btn btn-ghost" type="button" onclick="openModal()">
+                Request a callback
+              </button>
             </div>
             <div class="cta-note">
               Prefer texting instead of calling? WhatsApp is the fastest way to reach us.
+            </div>
+          </div>
+
+          <!-- Карта покрытия GTA -->
+          <div class="card map-card">
+            <div class="card-title">GTA coverage – service map</div>
+            <p class="card-text">
+              Typical service area: Toronto, Etobicoke, North York, Scarborough, Mississauga, Brampton, Vaughan and nearby.
+            </p>
+            <div class="map-wrap">
+              <iframe
+                class="map-iframe"
+                src="https://www.google.com/maps?q=Toronto%20GTA&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -654,13 +937,73 @@
 
     <footer>
       <div class="container">
-        <div>© <span id="year"></span> LFI Appliance Repair · Leo Fix It · Toronto & GTA</div>
+        <div class="footer-inner">
+          <div>
+            © <span id="year"></span> LFI Appliance Repair · Leo Fix It · Toronto & GTA
+          </div>
+          <div class="social-links">
+            <!-- Те же соцсети в подвале -->
+            <a class="social-link" href="https://instagram.com/your_instagram" target="_blank" rel="noopener">
+              <span class="social-icon">📸</span><span>Instagram</span>
+            </a>
+            <a class="social-link" href="https://facebook.com/your_facebook" target="_blank" rel="noopener">
+              <span class="social-icon">👍</span><span>Facebook</span>
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   </div>
 
+  <!-- Modal callback form (Netlify Forms) -->
+  <div class="modal" id="contact-modal" aria-hidden="true">
+    <div class="modal-backdrop" onclick="closeModal()"></div>
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" onclick="closeModal()" aria-label="Close">×</button>
+      <div class="modal-title">Request a callback</div>
+      <div class="modal-sub">
+        Leave your name and phone number. We’ll get back to you as soon as possible.
+      </div>
+
+      <!-- Netlify form: submissions появятся в Netlify → Forms → callback -->
+      <form name="callback" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="callback" />
+
+        <div class="form-grid">
+          <div>
+            <div class="field-label">Name</div>
+            <input class="input" type="text" name="name" placeholder="Your name" required />
+          </div>
+          <div>
+            <div class="field-label">Phone number</div>
+            <input class="input" type="tel" name="phone" placeholder="+1 (437) 499-7971" required />
+          </div>
+          <div>
+            <div class="field-label">Short comment (optional)</div>
+            <textarea class="textarea" name="message" placeholder="Fridge not cooling, washer not draining, etc."></textarea>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">
+          Send request
+        </button>
+        <div class="form-note">
+          The request will be sent securely. You’ll see a confirmation after submit.
+        </div>
+      </form>
+    </div>
+  </div>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    function openModal() {
+      document.getElementById('contact-modal').classList.add('is-open');
+    }
+
+    function closeModal() {
+      document.getElementById('contact-modal').classList.remove('is-open');
+    }
   </script>
 </body>
 </html>
