@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <title>LFI Appliance Repair | Appliance Repair Toronto & GTA | Leo Fix It</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="LFI Appliance Repair – professional appliance repair across Toronto & GTA. Fridge, washer, dryer, dishwasher and oven repair with a solid technical approach. Diagnostic visit only $99, waived with repair. Message us on WhatsApp or call to book a visit." />
+  <meta name="keywords" content="appliance repair Toronto, appliance repair GTA, fridge repair Toronto, refrigerator repair GTA, washer repair Toronto, dryer repair Toronto, dishwasher repair Toronto, oven repair Toronto, stove repair Toronto, appliance service Etobicoke, appliance technician Toronto, Leo Fix It" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="en" />
+  <meta name="author" content="LFI Appliance Repair · Leo Fix It" />
+  <link rel="canonical" href="https://lfirepair.ca/" />
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:title" content="LFI Appliance Repair – Appliance Repair Toronto & GTA · Leo Fix It" />
+  <meta property="og:description" content="Fridge, washer, dryer, dishwasher and oven repair across Toronto & GTA. Diagnostic visit only $99 (waived with repair). Fast response via WhatsApp or phone." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lfirepair.ca/" />
+  <meta property="og:image" content="https://lfirepair.ca/images/og-image.jpg" />
+  <meta property="og:site_name" content="LFI Appliance Repair" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LFI Appliance Repair – Appliance Repair Toronto & GTA · Leo Fix It" />
+  <meta name="twitter:description" content="Technical appliance repair service in Toronto & GTA. Diagnostic visit $99, waived with repair. Fridges, washers, dryers, dishwashers, ovens and more." />
+  <meta name="twitter:image" content="https://lfirepair.ca/images/og-image.jpg" />
+
+  <!-- GEO / Local signals -->
+  <meta name="geo.region" content="CA-ON" />
+  <meta name="geo.placename" content="Toronto" />
+  <meta name="geo.position" content="43.6532;-79.3832" />
+  <meta name="ICBM" content="43.6532, -79.3832" />
+
+  <!-- Favicons (can be added later) -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/icons/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+
+  <!-- LocalBusiness structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "LFI Appliance Repair",
+    "image": "https://lfirepair.ca/images/og-image.jpg",
+    "url": "https://lfirepair.ca/",
+    "telephone": "+1-437-499-7971",
+    "priceRange": "$$",
+    "description": "Professional appliance repair service in Toronto and the Greater Toronto Area (GTA). Fridge, washer, dryer, dishwasher and oven repair with diagnostic visit only $99, waived with repair.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Toronto",
+      "addressRegion": "ON",
+      "addressCountry": "CA"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Toronto" },
+      { "@type": "City", "name": "Etobicoke" },
+      { "@type": "City", "name": "Mississauga" },
+      { "@type": "City", "name": "Scarborough" },
+      { "@type": "City", "name": "Brampton" },
+      { "@type": "City", "name": "Vaughan" }
+    ],
+    "serviceType": [
+      "Appliance repair",
+      "Refrigerator repair",
+      "Washer repair",
+      "Dryer repair",
+      "Dishwasher repair",
+      "Oven and stove repair",
+      "Microwave repair",
+      "Range hood repair"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #2A162B;
+      --bg-light: #3A2140;
+      --bg-deep: #180A19;
+
+      --text-primary: #FFFFFF;
+      --text-secondary: #E2D5F9;
+      --text-muted: #B6A6D4;
+
+      --accent: #C29CFF;
+      --accent-green: #5CFF7A;
+
+      --ink: #1A0C1F;
+
+      --card: #251125;
+      --border: #473051;
+      --radius: 16px;
+      --shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
+      --max-width: 960px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #3A2140, #2A162B 40%, #180A19 90%);
+      color: var(--text-primary);
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Toronto background gutters (left/right) */
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 14vw;
+      max-width: 180px;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.26;
+      filter: blur(1.2px);
+      pointer-events: none;
+      z-index: -1;
+      mix-blend-mode: screen;
+    }
+    body::before {
+      left: 0;
+      background-image:
+        linear-gradient(to right, rgba(10,3,16,0.97), rgba(10,3,16,0.45)),
+        url("images/toronto-left.jpg");
+    }
+    body::after {
+      right: 0;
+      background-image:
+        linear-gradient(to left, rgba(10,3,16,0.97), rgba(10,3,16,0.45)),
+        url("images/toronto-right.jpg");
+    }
+    @media (max-width: 640px) {
+      body::before,
+      body::after { display: none; }
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      border-bottom: 1px solid rgba(191, 191, 191, 0.25);
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(23, 9, 25, 0.95), transparent);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      gap: 16px;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: row;
+      gap: 2px;
+      align-items: center;
+    }
+    .logo-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 14px;
+      object-fit: cover;
+
+      margin: 0;
+    }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Логотип-картинка сверху */
+    
+
+    .logo-text-main {
+      font-weight: 800;
+      font-size: 21px;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+    .logo-text-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: -2px;
+    }
+    .logo-extra {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+      line-height: 1.3;
+    }
+
+    .nav-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+      font-size: 13px;
+    }
+    @media (min-width: 640px) {
+      .nav-cta {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+
+    .nav-contacts {
+      display: none;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+      font-size: 20px;
+      color: var(--text-muted);
+    }
+    @media (min-width: 768px) {
+      .nav-contacts { display: flex; }
+    }
+
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: #D9D9D9;
+      color: var(--ink);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.6);
+      background: #FFFFFF;
+    }
+    .btn-outline {
+      border: 1px solid rgba(191, 191, 191, 0.7);
+      background: rgba(24, 10, 25, 0.7);
+      color: var(--text-secondary);
+    }
+    .btn-outline:hover {
+      background: rgba(24, 10, 25, 0.95);
+      color: #FFFFFF;
+    }
+    .btn-ghost {
+      border: 1px dashed rgba(191, 191, 191, 0.5);
+      background: transparent;
+      color: var(--text-muted);
+    }
+    .btn-ghost:hover {
+      background: rgba(24, 10, 25, 0.7);
+    }
+    .btn-nav-primary {
+      background: #D9D9D9;
+      color: var(--ink);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.55);
+    }
+    .btn-nav-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 26px rgba(0, 0, 0, 0.6);
+      background: #FFFFFF;
+    }
+    .btn-nav-outline {
+      border: 1px solid rgba(191, 191, 191, 0.7);
+      background: rgba(24, 10, 25, 0.9);
+      color: var(--text-secondary);
+    }
+    .btn-nav-outline:hover { background: rgba(24, 10, 25, 1); }
+    .btn-nav-ghost {
+      border: 1px solid rgba(191, 191, 191, 0.3);
+      background: rgba(24, 10, 25, 0.6);
+      color: var(--text-muted);
+    }
+    .btn-nav-ghost:hover {
+      background: rgba(24, 10, 25, 0.9);
+      color: #FFFFFF;
+    }
+
+    main { flex: 1; }
+
+    /* Green glow utility */
+    .glow-border {
+      box-shadow:
+        0 0 0 1px rgba(92, 255, 122, 0.5),
+        0 0 12px rgba(92, 255, 122, 0.45);
+      border-color: rgba(92, 255, 122, 0.75) !important;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      padding: 40px 0 32px;
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      gap: 32px;
+    }
+    @media (min-width: 768px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+        align-items: center;
+      }
+      .hero-grid > div:first-child {
+        max-width: 520px;
+      }
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      background: radial-gradient(circle at top left, rgba(255,255,255,0.15), rgba(24,10,25,0.95));
+      border: 1px solid rgba(191, 191, 191, 0.6);
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.7);
+    }
+    .badge.glow-border {
+      box-shadow:
+        0 0 0 1px rgba(92, 255, 122, 0.7),
+        0 0 14px rgba(92, 255, 122, 0.55);
+      border-color: rgba(92, 255, 122, 0.9);
+    }
+    .badge-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(217, 217, 217, 0.2);
+    }
+
+    .hero-title {
+      font-size: clamp(30px, 5vw, 40px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+    .hero-subtitle {
+      font-size: 18px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .hero-list {
+      list-style: none;
+      margin-bottom: 18px;
+    }
+    .hero-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .hero-list li span {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: rgba(92, 255, 122, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--accent-green);
+      border: 1px solid rgba(92, 255, 122, 0.8);
+      box-shadow: 0 0 8px rgba(92, 255, 122, 0.5);
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .cta-note {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .service-call-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(92, 255, 122, 0.7);
+      font-size: 13px;
+      color: var(--text-secondary);
+      background: rgba(6, 40, 20, 0.9);
+      box-shadow:
+        0 0 0 1px rgba(92, 255, 122, 0.7),
+        0 0 14px rgba(92, 255, 122, 0.55);
+    }
+    .service-call-pill span {
+      font-weight: 600;
+      color: var(--accent-green);
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top left, rgba(217, 217, 217, 0.12), var(--bg-light));
+      border-radius: 22px;
+      padding: 18px 18px 16px;
+      border: 1px solid rgba(191, 191, 191, 0.5);
+      box-shadow: var(--shadow);
+    }
+    .hero-card-title {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .hero-card-main {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text-secondary);
+    }
+    .hero-card-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      border: 1px solid rgba(191, 191, 191, 0.5);
+      color: var(--text-muted);
+      background: rgba(24, 10, 25, 0.7);
+    }
+    .hero-card-footer {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    section { padding: 28px 0; }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: var(--text-primary);
+    }
+    .section-muted {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+    }
+
+    .grid { display: grid; gap: 12px; }
+    @media (min-width: 768px) {
+      .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    .card {
+      background: rgba(24, 10, 25, 0.9);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 14px 14px 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-secondary);
+    }
+    .card-text {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .card-tag {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* What we repair card backgrounds */
+    .card-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.28;
+      filter: saturate(0.9);
+      z-index: 0;
+    }
+    .card-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(0,0,0,0.35), rgba(17,2,26,0.95));
+      z-index: 1;
+    }
+    .card-body {
+      position: relative;
+      z-index: 2;
+    }
+    .card-fridge .card-bg { background-image: url("images/fridge-repair.jpg"); }
+    .card-washer .card-bg { background-image: url("images/washer-repair.jpg"); }
+    .card-dishwasher .card-bg { background-image: url("images/dishwasher-repair.jpg"); }
+    .card-oven .card-bg { background-image: url("images/oven-repair.jpg"); }
+    .card-micro .card-bg { background-image: url("images/microwave-hood.jpg"); }
+    .card-other .card-bg { background-image: url("images/other-appliance.jpg"); }
+
+    /* Brands carousel */
+    .brands-carousel-wrapper { margin-top: 18px; }
+    .brands-carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: rgba(24, 10, 25, 0.95);
+      padding: 10px 36px;
+    }
+    .brands-track {
+      display: flex;
+      transition: transform 0.3s ease;
+    }
+    .brand-slide {
+      min-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+    .brand-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(191, 191, 191, 0.4);
+      font-size: 12px;
+      color: var(--text-secondary);
+      background: rgba(24, 10, 25, 0.85);
+      backdrop-filter: blur(8px);
+      white-space: nowrap;
+    }
+    .brands-nav {
+      position: absolute;
+      top: 50%;
+      left: 6px;
+      right: 6px;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    .brands-arrow {
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(10, 3, 16, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      pointer-events: auto;
+    }
+    .brands-dots {
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+    }
+    .brands-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(191, 191, 191, 0.4);
+    }
+    .brands-dot.is-active {
+      background: var(--accent-green);
+      box-shadow: 0 0 6px rgba(92, 255, 122, 0.6);
+    }
+
+    /* Steps */
+    .steps {
+      list-style: none;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+    .steps li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+      align-items: flex-start;
+    }
+    .step-num {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(92, 255, 122, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      color: var(--accent-green);
+      background: rgba(6, 40, 20, 0.95);
+      box-shadow: 0 0 8px rgba(92, 255, 122, 0.55);
+    }
+    .step-content-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 2px;
+      color: var(--text-secondary);
+    }
+
+    /* Gallery */
+    .gallery-grid { margin-bottom: 16px; }
+    .gallery-card { padding: 0; overflow: hidden; }
+    .gallery-img {
+      display: block;
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    @media (min-width: 768px) {
+      .gallery-img { height: 200px; }
+    }
+
+    /* Video list (5 windows) */
+    .videos-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .video-wrap {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: #000;
+    }
+    .video-wrap iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    
+    /* Service areas pills */
+    .service-areas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .service-area {
+      padding: 5px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(191, 191, 191, 0.55);
+      background: radial-gradient(circle at top left, rgba(255,255,255,0.12), rgba(17,6,24,0.9));
+      color: var(--text-secondary);
+      font-size: 12px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.45);
+      min-width: 0;
+      white-space: nowrap;
+    }
+
+    /* Modal form */
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 40;
+    }
+    .modal.is-open { display: flex; }
+    .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+    }
+    .modal-dialog {
+      position: relative;
+      z-index: 41;
+      width: 100%;
+      max-width: 420px;
+      background: rgba(24, 10, 25, 0.98);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 18px 18px 16px;
+    }
+    .modal-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-primary);
+    }
+    .modal-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .modal-close {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .form-grid {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .field-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+    .input, .textarea {
+      width: 100%;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(24, 10, 25, 0.9);
+      color: var(--text-primary);
+      padding: 8px 11px;
+      font-size: 14px;
+      outline: none;
+    }
+    .textarea {
+      border-radius: 12px;
+      min-height: 70px;
+      resize: vertical;
+    }
+    .input::placeholder, .textarea::placeholder {
+      color: #7c6c85;
+    }
+    .form-note {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* Popup promo modal */
+    .promo-modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 30;
+    }
+    .promo-modal.is-open { display: flex; }
+    .promo-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+    }
+    .promo-dialog {
+      position: relative;
+      z-index: 31;
+      width: 100%;
+      max-width: 380px;
+      background: rgba(24, 10, 25, 0.98);
+      border-radius: 18px;
+      border: 1px solid rgba(92, 255, 122, 0.7);
+      box-shadow:
+        0 0 0 1px rgba(92, 255, 122, 0.7),
+        0 0 16px rgba(92, 255, 122, 0.55);
+      padding: 16px 16px 14px;
+    }
+    .promo-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .promo-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .promo-close {
+      position: absolute;
+      top: 6px;
+      right: 8px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    footer {
+      border-top: 1px solid rgba(191, 191, 191, 0.3);
+      padding: 14px 0 18px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    @media (min-width: 640px) {
+      .footer-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 12px;
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.12), rgba(17, 6, 24, 0.85));
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(12px);
+    }
+    .social-link:hover {
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.2), rgba(17, 6, 24, 1));
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+    .social-icon { font-size: 14px; }
+  
+/* Logo left layout */
+.logo { display: flex; align-items: center; gap: 14px; }
+.logo-img { width: 120px; height: 120px; border-radius: 14px; object-fit: cover; margin-left: -35px; }
+.logo-text { display: flex; flex-direction: column; }
+
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+  <img src="images/og-image.jpg" alt="LFI Logo" class="logo-img">
+  <div class="logo-text">
+    <div class="logo-text-main">LFI Appliance Repair</div>
+    <div class="logo-text-sub">Leo Fix It – GTA</div>
+    <div class="logo-extra">Professional appliance service across the GTA</div>
+  </div>
+</div>
+<div class="nav-cta">
+            <div class="nav-contacts">
+              <div>📞 +1 (437) 499-7971</div>
+              <div>✉️ info@lfirepair.ca</div>
+            </div>
+            <div class="nav-buttons">
+              <a class="btn btn-nav-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair" target="_blank" rel="noopener">
+                WhatsApp
+              </a>
+              <a class="btn btn-nav-outline" href="tel:+14374997971">
+                Call
+              </a>
+              <a class="btn btn-nav-ghost" href="https://instagram.com/your_instagram" target="_blank" rel="noopener">
+                Instagram
+              </a>
+              <a class="btn btn-nav-ghost" href="https://facebook.com/your_facebook" target="_blank" rel="noopener">
+                Facebook
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <div class="badge glow-border">
+                <span class="badge-dot"></span>
+                Appliance repair with technical expertise across the GTA
+              </div>
+              <h1 class="hero-title">Reliable appliance repair with a solid technical approach.</h1>
+              <p class="hero-subtitle">
+                Fridges, washers, dryers, dishwashers, ovens and more. Professional diagnostics,
+                honest recommendations, and quality repairs for homes across the GTA.
+              </p>
+              <ul class="hero-list">
+                <li><span>✓</span> Engineer-level understanding of how your appliance works</li>
+                <li><span>✓</span> GTA coverage – Toronto and surrounding areas</li>
+                <li><span>✓</span> Clear communication and warranty on work</li>
+              </ul>
+              <div class="cta-row">
+                <a class="btn btn-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair" target="_blank" rel="noopener">
+                  Message us on WhatsApp
+                </a>
+                <a class="btn btn-outline" href="tel:+14374997971">
+                  Call: +1 (437) 499-7971
+                </a>
+                <button class="btn btn-ghost" type="button" onclick="openModal()">
+                  Request a callback
+                </button>
+              </div>
+              <div class="cta-note">
+                Fast response, real technician – send photos or videos of the issue for quicker help.
+              </div>
+              <div class="service-call-pill" style="margin-top: 12px;">
+                Diagnostic visit — <span>$99</span> (waived with repair)
+              </div>
+            </div>
+
+            <div>
+              <div class="hero-card">
+                <div class="hero-card-title">LFI Appliance Repair · Leo Fix It</div>
+                <div class="hero-card-main">One technician, one point of contact, full responsibility.</div>
+                <div class="hero-card-pills">
+                  <div class="pill">Fridges & Freezers</div>
+                  <div class="pill">Washers & Dryers</div>
+                  <div class="pill">Dishwashers</div>
+                  <div class="pill">Ovens & Stoves</div>
+                  <div class="pill">Microwaves & Hoods</div>
+                </div>
+                <div class="hero-card-footer">
+                  <span>Serving Toronto & GTA</span>
+                  <span>Warranty on completed work</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What we repair -->
+      <section id="services">
+        <div class="container">
+          <h2 class="section-title">What we repair</h2>
+          <p class="section-muted">
+            Most common household appliances. If you don’t see your unit here – send us a message,
+            we’ll let you know if we can help.
+          </p>
+          <div class="grid grid-3">
+            <div class="card card-fridge">
+              <div class="card-bg"></div>
+              <div class="card-overlay"></div>
+              <div class="card-body">
+                <div class="card-title">Refrigerators & freezers</div>
+                <p class="card-text">
+                  Not cooling, icing up, water leaks, strange noises – we diagnose the cause and offer
+                  repair options.
+                </p>
+              </div>
+            </div>
+            <div class="card card-washer">
+              <div class="card-bg"></div>
+              <div class="card-overlay"></div>
+              <div class="card-body">
+                <div class="card-title">Washers & dryers</div>
+                <p class="card-text">
+                  Not spinning, not draining, noisy operation, no heat, error codes – we focus on safe and
+                  long-term solutions.
+                </p>
+              </div>
+            </div>
+            <div class="card card-dishwasher">
+              <div class="card-bg"></div>
+              <div class="card-overlay"></div>
+              <div class="card-body">
+                <div class="card-title">Dishwashers</div>
+                <p class="card-text">
+                  Poor cleaning, water left in the tub, leaks, strange noises – we locate the root cause,
+                  not just reset the unit.
+                </p>
+              </div>
+            </div>
+            <div class="card card-oven">
+              <div class="card-bg"></div>
+              <div class="card-overlay"></div>
+              <div class="card-body">
+                <div class="card-title">Ovens, stoves & cooktops</div>
+                <p class="card-text">
+                  No heat, uneven baking, burners not working – electric ranges and built-in ovens.
+                </p>
+              </div>
+            </div>
+            <div class="card card-micro">
+              <div class="card-bg"></div>
+              <div class="card-overlay"></div>
+              <div class="card-body">
+                <div class="card-title">Microwaves & range hoods</div>
+                <p class="card-text">
+                  Light on but not heating, fan issues, control problems – we assess whether it’s worth repairing.
+                </p>
+              </div>
+            </div>
+            <div class="card card-other">
+              <div class="card-bg"></div>
+              <div class="card-overlay"></div>
+              <div class="card-body">
+                <div class="card-title">Other appliances</div>
+                <p class="card-text">
+                  Not sure if your appliance is covered? Message us on WhatsApp with a photo of the model tag.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Brands carousel -->
+          <div class="brands-carousel-wrapper">
+            <div class="section-muted" style="margin-bottom: 10px;">
+              Brands we work with:
+            </div>
+            <div class="brands-carousel">
+              <div class="brands-track" id="brands-track">
+                <div class="brand-slide">
+                  <div class="brand-pill">Whirlpool</div>
+                  <div class="brand-pill">Maytag</div>
+                  <div class="brand-pill">KitchenAid</div>
+                  <div class="brand-pill">Amana</div>
+                  <div class="brand-pill">Inglis</div>
+                  <div class="brand-pill">JennAir</div>
+                </div>
+                <div class="brand-slide">
+                  <div class="brand-pill">Frigidaire</div>
+                  <div class="brand-pill">Electrolux</div>
+                  <div class="brand-pill">Bosch</div>
+                  <div class="brand-pill">GE</div>
+                  <div class="brand-pill">Hotpoint</div>
+                  <div class="brand-pill">Admiral</div>
+                </div>
+                <div class="brand-slide">
+                  <div class="brand-pill">Samsung</div>
+                  <div class="brand-pill">LG</div>
+                  <div class="brand-pill">Haier</div>
+                  <div class="brand-pill">Moffat</div>
+                  <div class="brand-pill">Monogram</div>
+                  <div class="brand-pill">And more…</div>
+                </div>
+              </div>
+              <div class="brands-nav">
+                <button class="brands-arrow" type="button" onclick="moveBrands(-1)">‹</button>
+                <button class="brands-arrow" type="button" onclick="moveBrands(1)">›</button>
+              </div>
+            </div>
+            <div class="brands-dots">
+              <div class="brands-dot is-active" data-index="0"></div>
+              <div class="brands-dot" data-index="1"></div>
+              <div class="brands-dot" data-index="2"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why us -->
+      <section id="why-us">
+        <div class="container">
+          <h2 class="section-title">Why LFI Appliance Repair</h2>
+          <p class="section-muted">
+            Not just “parts changers”. We combine hands-on experience with a real technical mindset.
+          </p>
+          <div class="grid grid-2">
+            <div class="card glow-border">
+              <div class="card-tag">Technical approach</div>
+              <div class="card-title">Engineer-level diagnostics</div>
+              <p class="card-text">
+                We look at your appliance as a system, not just a set of parts. This means fewer “let’s try
+                replacing this” guesses and more precise repair decisions.
+              </p>
+            </div>
+            <div class="card glow-border">
+              <div class="card-tag">Transparency</div>
+              <div class="card-title">Honest recommendations</div>
+              <p class="card-text">
+                If a repair is not worth it, we’ll say so. You get clear explanations in simple language,
+                not technical jargon.
+              </p>
+            </div>
+            <div class="card glow-border">
+              <div class="card-tag">Coverage</div>
+              <div class="card-title">Toronto & GTA service</div>
+              <p class="card-text">
+                We serve Toronto and the Greater Toronto Area. If you’re not sure whether we cover your
+                area – just send a quick message.
+              </p>
+            </div>
+            <div class="card glow-border">
+              <div class="card-tag">Warranty</div>
+              <div class="card-title">We stand behind our work</div>
+              <p class="card-text">
+                Repairs come with a warranty on the work performed. Details depend on the type of repair
+                and parts used.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery & videos -->
+      <section id="gallery">
+        <div class="container">
+          <h2 class="section-title">Photos & video of our work</h2>
+          <p class="section-muted">
+            A few examples of real jobs – so you can see the level of work and attention to detail.
+            Replace these placeholders with your own media when ready.
+          </p>
+
+          <div class="grid grid-3 gallery-grid">
+            <div class="card gallery-card">
+              <img src="images/fridge-repair.jpg" alt="Fridge repair example" class="gallery-img">
+            </div>
+            <div class="card gallery-card">
+              <img src="images/washer-repair.jpg" alt="Washer repair example" class="gallery-img">
+            </div>
+            <div class="card gallery-card">
+              <img src="images/oven-repair.jpg" alt="Oven repair example" class="gallery-img">
+            </div>
+          </div>
+
+          <div class="card video-card">
+            <div class="card-title">Short video clips from real jobs</div>
+            <p class="card-text" style="margin-bottom: 8px;">
+              Five separate windows – you can insert different videos here (YouTube or other platform).
+            </p>
+            <div class="videos-list">
+              <div class="video-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/VIDEO_ID_1"
+                  title="LFI Appliance Repair – work example 1"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="video-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/VIDEO_ID_2"
+                  title="LFI Appliance Repair – work example 2"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="video-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/VIDEO_ID_3"
+                  title="LFI Appliance Repair – work example 3"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="video-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/VIDEO_ID_4"
+                  title="LFI Appliance Repair – work example 4"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="video-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/VIDEO_ID_5"
+                  title="LFI Appliance Repair – work example 5"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="how-it-works">
+        <div class="container">
+          <h2 class="section-title">How it works</h2>
+          <p class="section-muted">
+            Simple process – from your first message to a working appliance.
+          </p>
+          <ul class="steps">
+            <li>
+              <div class="step-num">✓</div>
+              <div>
+                <div class="step-content-title">Contact us</div>
+                <div class="card-text">
+                  WhatsApp or call: +1 (437) 499-7971. Send photos or a short video of the issue and the model tag.
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">✓</div>
+              <div>
+                <div class="step-content-title">We confirm a time window</div>
+                <div class="card-text">
+                  You receive a time window for the visit and any preparation steps (for example, clearing
+                  space around the appliance).
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">✓</div>
+              <div>
+                <div class="step-content-title">On-site diagnostics</div>
+                <div class="card-text">
+                  We identify the cause of the problem and explain the options, including repair cost and
+                  approximate time.
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">✓</div>
+              <div>
+                <div class="step-content-title">Repair & warranty</div>
+                <div class="card-text">
+                  We complete the repair and provide a warranty on the work. If parts are needed, we discuss
+                  timelines and pricing beforehand.
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contact & GTA map -->
+      <section id="contact">
+        <div class="container">
+          <h2 class="section-title">Service area & contact</h2>
+          <p class="section-muted">
+            We serve Toronto and the Greater Toronto Area (GTA). If you’re not sure whether your address is
+            covered, send us a quick message with your postal code.
+          </p>
+
+          <div class="card" style="margin-bottom: 16px;">
+            <div class="card-title">Ready to fix your appliance?</div>
+            <p class="card-text" style="margin-bottom: 10px;">
+              Click the button below and tell us what’s going on. You can send photos, videos, or an error
+              code so we can come prepared. Or fill in the callback form.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair" target="_blank" rel="noopener">
+                Message us on WhatsApp
+              </a>
+              <a class="btn btn-outline" href="tel:+14374997971">
+                Call: +1 (437) 499-7971
+              </a>
+              <button class="btn btn-ghost" type="button" onclick="openModal()">
+                Request a callback
+              </button>
+            </div>
+            <div class="cta-note">
+              Prefer texting instead of calling? WhatsApp is the fastest way to reach us.
+            </div>
+            <div class="service-call-pill" style="margin-top: 10px;">
+              Diagnostic visit — <span>$99</span> (waived with repair)
+            </div>
+          </div>
+
+          
+          <div class="card">
+            <div class="card-title">Service zones</div>
+            <p class="card-text" style="margin-bottom: 10px;">
+              Typical areas we cover within the Greater Toronto Area. If you don’t see your city here, send us a quick message with your postal code.
+            </p>
+            <div class="service-areas">
+              <div class="service-area">Toronto</div>
+              <div class="service-area">Etobicoke</div>
+              <div class="service-area">North York</div>
+              <div class="service-area">Scarborough</div>
+              <div class="service-area">East York</div>
+              <div class="service-area">Mississauga</div>
+              <div class="service-area">Brampton</div>
+              <div class="service-area">Vaughan</div>
+              <div class="service-area">Richmond Hill</div>
+              <div class="service-area">Markham</div>
+              <div class="service-area">Oakville</div>
+              <div class="service-area">Burlington</div>
+              <div class="service-area">Aurora</div>
+              <div class="service-area">Newmarket</div>
+              <div class="service-area">Collingwood</div>
+            </div>
+            <p class="card-text" style="margin-top: 10px; font-size: 12px;">
+              Each zone can later have its own background image or photo. For now they are simple, readable tags.
+            </p>
+          </div>
+        </div>
+      </section></div>
+        </div>
+      
+    </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-text">© 2025 LFI Appliance Repair — Leo Fix It. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div> <!-- wrapper-page -->
+</body>
+</html>
