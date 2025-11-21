@@ -1466,7 +1466,7 @@
       if (!track) return;
       const slides = document.querySelectorAll('.brand-slide');
       const totalSlides = slides.length || 1;
-      const step = 200 / totalSlides; // move exactly one slide width
+      const step = 350 / totalSlides; // move exactly one slide width
       track.style.transform = 'translateX(' + (-brandIndex * step) + '%)';
       const dots = document.querySelectorAll('.brands-dot');
       dots.forEach(dot => dot.classList.remove('is-active'));
