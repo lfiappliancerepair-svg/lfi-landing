@@ -736,7 +736,238 @@
       transform: rotate(45deg);
     }
 
-    /* Improved Mobile CTA Bar - ИСПРАВЛЕНА ПРОБЛЕМА С ФУТЕРОМ */
+    /* Gallery Styles */
+    .gallery-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .gallery-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      height: 200px;
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-card:hover .gallery-img {
+      transform: scale(1.05);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: var(--radius);
+    }
+
+    .gallery-card:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .gallery-title {
+      font-weight: 600;
+      color: white;
+    }
+
+    /* Video Section */
+    .video-section {
+      margin: 40px 0;
+    }
+
+    .videos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .video-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Areas Carousel */
+    .areas-carousel-section {
+      margin: 40px 0;
+    }
+
+    .areas-carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+    }
+
+    .areas-track {
+      display: flex;
+      transition: transform 0.3s ease;
+    }
+
+    .area-slide {
+      display: flex;
+      gap: 20px;
+      min-width: 100%;
+      padding: 10px;
+    }
+
+    .area-card {
+      flex: 1;
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.3s ease;
+    }
+
+    .area-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .area-card-image {
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .area-card-content {
+      padding: 15px;
+    }
+
+    .area-card-name {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .area-card-region {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 5px;
+    }
+
+    .areas-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none;
+      padding: 0 10px;
+    }
+
+    .areas-arrow {
+      background: rgba(0, 0, 0, 0.7);
+      border: none;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      pointer-events: all;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .areas-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .areas-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--text-muted);
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .areas-dot.active {
+      background: var(--accent-green);
+    }
+
+    /* Smart Form */
+    .smart-form {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .form-quick-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .quick-option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .quick-option:hover {
+      border-color: var(--accent);
+      background: rgba(186, 140, 255, 0.1);
+    }
+
+    .quick-option span:first-child {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    /* Improved Mobile CTA Bar */
     .mobile-cta-bar {
       position: fixed;
       bottom: 15px;
@@ -769,13 +1000,230 @@
       main { padding-bottom: 80px; }
     }
 
+    /* Modal Styles */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal.is-open {
+      display: flex;
+    }
+
+    .modal-backdrop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+    }
+
+    .modal-dialog {
+      position: relative;
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 30px;
+      max-width: 500px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      z-index: 1001;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: var(--text-muted);
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+
+    .modal-sub {
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .field-label {
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    .input, .textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      font-size: 14px;
+      font-family: inherit;
+    }
+
+    .textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    /* Promo Modal */
+    .promo-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .promo-modal.is-open {
+      display: flex;
+    }
+
+    .promo-backdrop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .promo-dialog {
+      position: relative;
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 30px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      border: 2px solid var(--accent-green);
+      z-index: 1001;
+    }
+
+    .promo-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      color: var(--text-muted);
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .promo-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--accent-green);
+    }
+
+    .promo-text {
+      margin-bottom: 20px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Cost Estimator */
+    .estimator-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .estimator-step {
+      margin-bottom: 15px;
+    }
+
+    .estimator-step label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .estimator-step select {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      font-size: 14px;
+    }
+
+    .estimate-result {
+      text-align: center;
+      padding: 20px;
+      background: rgba(74, 235, 106, 0.1);
+      border-radius: var(--radius);
+      border: 1px solid rgba(74, 235, 106, 0.3);
+    }
+
+    .estimate-range {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent-green);
+      margin-bottom: 8px;
+    }
+
+    .estimate-note {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
     footer {
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       padding: clamp(20px, 3vw, 30px) 0;
       font-size: clamp(11px, 1.5vw, 12px);
       color: var(--text-muted);
       margin-top: auto;
-      /* ИСПРАВЛЕНИЕ: добавляем отступ для мобильной панели */
       padding-bottom: 80px;
       background: rgba(17, 8, 20, 0.8);
     }
@@ -858,99 +1306,6 @@
       color: var(--text-muted);
       margin-top: 10px;
     }
-
-    /* Cost Estimator */
-    .estimator-card {
-      background: var(--card);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      padding: 20px;
-      margin: 20px 0;
-    }
-
-    .estimator-step {
-      margin-bottom: 15px;
-    }
-
-    .estimator-step label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-      color: var(--text-secondary);
-    }
-
-    .estimator-step select {
-      width: 100%;
-      padding: 10px 12px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      background: var(--bg-deep);
-      color: var(--text-primary);
-      font-size: 14px;
-    }
-
-    .estimate-result {
-      text-align: center;
-      padding: 20px;
-      background: rgba(74, 235, 106, 0.1);
-      border-radius: var(--radius);
-      border: 1px solid rgba(74, 235, 106, 0.3);
-    }
-
-    .estimate-range {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--accent-green);
-      margin-bottom: 8px;
-    }
-
-    .estimate-note {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    /* Smart Form */
-    .smart-form {
-      background: var(--card);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      padding: 20px;
-      margin: 20px 0;
-    }
-
-    .form-quick-options {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .quick-option {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 15px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: var(--radius);
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-align: center;
-    }
-
-    .quick-option:hover {
-      border-color: var(--accent);
-      background: rgba(186, 140, 255, 0.1);
-    }
-
-    .quick-option span:first-child {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-
-    /* Остальные стили остаются такими же как в предыдущей версии */
-    /* Gallery, Video, Areas Carousel и т.д. */
-
   </style>
 </head>
 <body>
@@ -974,7 +1329,6 @@
               <div>✉️ lfisvc@gmail.com</div>
             </div>
             <div class="nav-buttons">
-              <!-- НОВАЯ КНОПКА ОНЛАЙН-ЗАПИСИ -->
               <button class="btn btn-booking" onclick="openBookingModal()">
                 📅 Online Booking
               </button>
@@ -1725,7 +2079,7 @@
       </section>
     </main>
 
-    <!-- Improved Mobile CTA Bar - ИСПРАВЛЕНА ПРОБЛЕМА С ФУТЕРОМ -->
+    <!-- Improved Mobile CTA Bar -->
     <div class="mobile-cta-bar" id="mobile-cta-bar">
       <a href="tel:+14374997971" class="btn btn-outline">📞 Call</a>
       <a href="https://wa.me/14374997971" class="btn btn-primary">💬 WhatsApp</a>
@@ -1758,6 +2112,20 @@
         </div>
       </div>
     </footer>
+  </div>
+
+  <!-- Gallery Modal -->
+  <div class="modal" id="gallery-modal">
+    <div class="modal-backdrop" onclick="closeGalleryModal()"></div>
+    <div class="modal-dialog" style="max-width: 800px;">
+      <button class="modal-close" onclick="closeGalleryModal()">×</button>
+      <img id="gallery-main-img" src="" alt="" style="width: 100%; border-radius: var(--radius); margin-bottom: 15px;">
+      <div class="gallery-thumbnails" style="display: flex; gap: 10px; justify-content: center;">
+        <img src="images/fridge-repair.jpg" alt="Fridge repair" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px; cursor: pointer; border: 2px solid transparent;" onclick="changeGalleryImage(0)">
+        <img src="images/washer-repair.jpg" alt="Washer repair" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px; cursor: pointer; border: 2px solid transparent;" onclick="changeGalleryImage(1)">
+        <img src="images/oven-repair.jpg" alt="Oven repair" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px; cursor: pointer; border: 2px solid transparent;" onclick="changeGalleryImage(2)">
+      </div>
+    </div>
   </div>
 
   <!-- НОВЫЙ МОДАЛЬНЫЙ ОКНО ОНЛАЙН-ЗАПИСИ -->
@@ -1850,7 +2218,7 @@
   </div>
 
   <!-- Modal callback form -->
-  <div class="modal" id="contact-modal" aria-hidden="true">
+  <div class="modal" id="contact-modal">
     <div class="modal-backdrop" onclick="closeModal()"></div>
     <div class="modal-dialog">
       <button class="modal-close" type="button" onclick="closeModal()" aria-label="Close">×</button>
@@ -2051,7 +2419,7 @@
       
       // Update active thumbnail
       document.querySelectorAll('.gallery-thumbnails img').forEach((thumb, i) => {
-        thumb.classList.toggle('active', i === index);
+        thumb.style.borderColor = i === index ? 'var(--accent-green)' : 'transparent';
       });
     }
 
