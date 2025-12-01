@@ -175,7 +175,7 @@
       justify-content: center;
       color: white;
       font-weight: bold;
-      font-size: 20px;
+      font-size: 24px;
     }
     .logo-text-main {
       font-weight: 800;
@@ -514,13 +514,6 @@
       filter: saturate(0.9);
       z-index: 0;
       transition: transform 0.5s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-secondary);
-      font-size: 14px;
-      text-align: center;
-      padding: 20px;
     }
 
     .card:hover .card-bg { transform: scale(1.05); }
@@ -534,58 +527,30 @@
 
     .card-body { position: relative; z-index: 2; }
 
+    /* Fallback for missing background images */
     .card-fridge .card-bg { 
-      background: linear-gradient(135deg, rgba(0,100,155,0.7), rgba(0,120,200,0.7));
-      background-image: url("images/fridge-repairrr.jpg");
+      background: linear-gradient(135deg, rgba(0,100,155,0.7), rgba(0,120,200,0.7)) url("images/fridge-repairrr.jpg");
+      background-size: cover;
     }
-    .card-fridge .card-bg::before { 
-      content: "❄️ Fridge Repair Demo";
-      display: block;
-    }
-    
     .card-washer .card-bg { 
-      background: linear-gradient(135deg, rgba(158,11,15,0.7), rgba(200,16,46,0.7));
-      background-image: url("images/washer-repairrr.jpg");
+      background: linear-gradient(135deg, rgba(158,11,15,0.7), rgba(200,16,46,0.7)) url("images/washer-repairrr.jpg");
+      background-size: cover;
     }
-    .card-washer .card-bg::before { 
-      content: "💧 Washer Repair Demo";
-      display: block;
-    }
-    
     .card-dishwasher .card-bg { 
-      background: linear-gradient(135deg, rgba(255,218,0,0.7), rgba(255,231,76,0.7));
-      background-image: url("images/dishwasher-repair.jpg");
+      background: linear-gradient(135deg, rgba(255,218,0,0.7), rgba(255,231,76,0.7)) url("images/dishwasher-repair.jpg");
+      background-size: cover;
     }
-    .card-dishwasher .card-bg::before { 
-      content: "🍽️ Dishwasher Repair Demo";
-      display: block;
-    }
-    
     .card-oven .card-bg { 
-      background: linear-gradient(135deg, rgba(165,0,52,0.7), rgba(206,15,61,0.7));
-      background-image: url("images/oven-repairrr.jpg");
+      background: linear-gradient(135deg, rgba(165,0,52,0.7), rgba(206,15,61,0.7)) url("images/oven-repairrr.jpg");
+      background-size: cover;
     }
-    .card-oven .card-bg::before { 
-      content: "🔥 Oven Repair Demo";
-      display: block;
-    }
-    
     .card-micro .card-bg { 
-      background: linear-gradient(135deg, rgba(10,100,160,0.7), rgba(6,128,198,0.7));
-      background-image: url("images/microwave-hood.jpg");
+      background: linear-gradient(135deg, rgba(10,100,160,0.7), rgba(6,128,198,0.7)) url("images/microwave-hood.jpg");
+      background-size: cover;
     }
-    .card-micro .card-bg::before { 
-      content: "🌀 Microwave Demo";
-      display: block;
-    }
-    
     .card-other .card-bg { 
-      background: linear-gradient(135deg, rgba(74,235,106,0.7), rgba(71,211,103,0.7));
-      background-image: url("images/other-appliance.jpg");
-    }
-    .card-other .card-bg::before { 
-      content: "🔧 Other Appliances";
-      display: block;
+      background: linear-gradient(135deg, rgba(74,235,106,0.7), rgba(71,211,103,0.7)) url("images/other-appliance.jpg");
+      background-size: cover;
     }
 
     /* Why LFI Section */
@@ -823,11 +788,6 @@
       border-radius: var(--radius);
       transition: transform 0.3s ease;
       background: linear-gradient(135deg, #4AEB6A, #BA8CFF);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 16px;
     }
 
     .gallery-card:hover .gallery-img {
@@ -898,7 +858,7 @@
       border: none;
     }
 
-    /* Areas Carousel */
+    /* Areas Carousel - FIXED with images */
     .areas-carousel-section {
       margin: 40px 0;
     }
@@ -939,12 +899,7 @@
       height: 150px;
       background-size: cover;
       background-position: center;
-      background: linear-gradient(135deg, #2a152b, #1a0b1c);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-secondary);
-      font-size: 14px;
+      background-color: var(--bg-light);
     }
 
     .area-card-content {
@@ -1396,7 +1351,7 @@
       <div class="container">
         <div class="navbar">
           <div class="logo">
-            <div class="logo-img">LFI</div>
+            <img src="images/og-image.jpg" alt="LFI Appliance Repair Logo" class="logo-img" loading="lazy">
             <div class="logo-text">
               <div class="logo-text-main">LFI Appliance Repair</div>
               <div class="logo-text-sub">Coordination Services – GTA</div>
@@ -1530,7 +1485,7 @@
         </div>
       </section>
 
-      <!-- PRICING SECTION - FIXED TABLE -->
+      <!-- PRICING SECTION -->
       <section id="pricing">
         <div class="container">
           <div class="pricing-section">
@@ -1847,21 +1802,21 @@
 
           <div class="grid grid-3 gallery-grid">
             <div class="card gallery-card" onclick="openGalleryModal(0)">
-              <div class="gallery-img">Fridge Repair Demonstration</div>
+              <img src="images/fridge-repair.jpg" alt="Fridge repair demonstration" class="gallery-img" loading="lazy">
               <div class="gallery-overlay">
                 <div class="gallery-icon">🔍</div>
                 <div class="gallery-title">Fridge Repair Demo</div>
               </div>
             </div>
             <div class="card gallery-card" onclick="openGalleryModal(1)">
-              <div class="gallery-img">Washer Repair Demonstration</div>
+              <img src="images/washer-repair.jpg" alt="Washer repair demonstration" class="gallery-img" loading="lazy">
               <div class="gallery-overlay">
                 <div class="gallery-icon">🔍</div>
                 <div class="gallery-title">Washer Repair Demo</div>
               </div>
             </div>
             <div class="card gallery-card" onclick="openGalleryModal(2)">
-              <div class="gallery-img">Oven Repair Demonstration</div>
+              <img src="images/oven-repair.jpg" alt="Oven repair demonstration" class="gallery-img" loading="lazy">
               <div class="gallery-overlay">
                 <div class="gallery-icon">🔍</div>
                 <div class="gallery-title">Oven Repair Demo</div>
@@ -1919,7 +1874,7 @@
         </div>
       </section>
 
-      <!-- SERVICE AREAS -->
+      <!-- SERVICE AREAS - ВОССТАНОВЛЕНЫ КАРТИНКИ -->
       <section id="service-areas">
         <div class="container">
           <h2 class="section-title">Service Areas</h2>
@@ -1930,26 +1885,102 @@
           <div class="areas-carousel-section">
             <div class="areas-carousel">
               <div class="areas-track" id="areas-track">
+                <!-- Slide 1 -->
                 <div class="area-slide">
                   <div class="area-card">
-                    <div class="area-card-image">Downtown Toronto</div>
+                    <div class="area-card-image" style="background-image: url('images/downtown-toronto.jpg')"></div>
                     <div class="area-card-content">
                       <div class="area-card-name">Downtown Toronto</div>
                       <div class="area-card-region">Central Toronto</div>
                     </div>
                   </div>
                   <div class="area-card">
-                    <div class="area-card-image">Midtown</div>
+                    <div class="area-card-image" style="background-image: url('images/midtown-toronto.jpg')"></div>
                     <div class="area-card-content">
                       <div class="area-card-name">Midtown</div>
                       <div class="area-card-region">Central Toronto</div>
                     </div>
                   </div>
                   <div class="area-card">
-                    <div class="area-card-image">The Beaches</div>
+                    <div class="area-card-image" style="background-image: url('images/the-beaches.jpg')"></div>
                     <div class="area-card-content">
                       <div class="area-card-name">The Beaches</div>
                       <div class="area-card-region">Central Toronto</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="area-slide">
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/liberty-village.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Liberty Village</div>
+                      <div class="area-card-region">Central Toronto</div>
+                    </div>
+                  </div>
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/etobicoke.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Etobicoke</div>
+                      <div class="area-card-region">West GTA</div>
+                    </div>
+                  </div>
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/mississauga.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Mississauga</div>
+                      <div class="area-card-region">West GTA</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="area-slide">
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/oakville.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Oakville</div>
+                      <div class="area-card-region">West GTA</div>
+                    </div>
+                  </div>
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/brampton.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Brampton</div>
+                      <div class="area-card-region">West GTA</div>
+                    </div>
+                  </div>
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/north-york.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">North York</div>
+                      <div class="area-card-region">North GTA</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="area-slide">
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/vaughan.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Vaughan</div>
+                      <div class="area-card-region">North GTA</div>
+                    </div>
+                  </div>
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/richmond-hill.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Richmond Hill</div>
+                      <div class="area-card-region">North GTA</div>
+                    </div>
+                  </div>
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/markham.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Markham</div>
+                      <div class="area-card-region">North GTA</div>
                     </div>
                   </div>
                 </div>
@@ -1958,6 +1989,13 @@
               <div class="areas-nav">
                 <button class="areas-arrow" onclick="moveAreas(-1)">‹</button>
                 <button class="areas-arrow" onclick="moveAreas(1)">›</button>
+              </div>
+
+              <div class="areas-dots" id="areas-dots">
+                <div class="areas-dot active" data-index="0"></div>
+                <div class="areas-dot" data-index="1"></div>
+                <div class="areas-dot" data-index="2"></div>
+                <div class="areas-dot" data-index="3"></div>
               </div>
             </div>
           </div>
@@ -2198,12 +2236,16 @@
 
     // Areas carousel
     let areasIndex = 0;
-    const totalAreasSlides = 1;
+    const totalAreasSlides = 4;
 
     function updateAreasCarousel() {
       const track = document.getElementById('areas-track');
       if (!track) return;
       track.style.transform = `translateX(-${areasIndex * 100}%)`;
+      
+      const dots = document.querySelectorAll('.areas-dot');
+      dots.forEach(dot => dot.classList.remove('active'));
+      if (dots[areasIndex]) dots[areasIndex].classList.add('active');
     }
 
     function moveAreas(direction) {
@@ -2213,6 +2255,16 @@
 
     // Initialize on load
     document.addEventListener('DOMContentLoaded', function() {
+      // Initialize areas carousel dots
+      const dotsContainer = document.getElementById('areas-dots');
+      if (dotsContainer) {
+        dotsContainer.addEventListener('click', function(e) {
+          if (e.target.classList.contains('areas-dot')) {
+            areasIndex = parseInt(e.target.getAttribute('data-index'));
+            updateAreasCarousel();
+          }
+        });
+      }
       updateAreasCarousel();
       
       // Mobile CTA bar hide on scroll to footer
