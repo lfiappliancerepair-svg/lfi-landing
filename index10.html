@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>LFI Appliance Repair | Appliance Repair Toronto & GTA | </title>
+  <title>LFI Appliance Repair | Appliance Repair Coordination & Support Toronto & GTA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="LFI Appliance Repair – professional appliance repair across Toronto & GTA. Fridge, washer, dryer, dishwasher and oven repair with a solid technical approach. Diagnostic visit only $99, waived with repair." />
+  <meta name="description" content="LFI Appliance Repair – connecting customers with independent appliance technicians across Toronto & GTA. Educational content and scheduling support." />
   <meta name="keywords" content="appliance repair Toronto, appliance repair GTA, fridge repair Toronto, refrigerator repair GTA, washer repair Toronto, dryer repair Toronto, dishwasher repair Toronto, oven repair Toronto, stove repair Toronto, appliance service Etobicoke, appliance technician Toronto" />
   <meta name="robots" content="index, follow" />
   <meta name="language" content="en" />
@@ -12,8 +12,8 @@
   <link rel="canonical" href="https://lfirepair.ca/" />
 
   <!-- Open Graph / Facebook / WhatsApp -->
-  <meta property="og:title" content="LFI Appliance Repair – Appliance Repair Toronto & GTA · " />
-  <meta property="og:description" content="Fridge, washer, dryer, dishwasher and oven repair across Toronto & GTA. Diagnostic visit only $99 (waived with repair). Fast response via WhatsApp or phone." />
+  <meta property="og:title" content="LFI Appliance Repair – Appliance Repair Coordination Toronto & GTA" />
+  <meta property="og:description" content="Connecting customers with independent technicians for fridge, washer, dryer, dishwasher and oven repair across Toronto & GTA. Educational content and scheduling support." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://lfirepair.ca/" />
   <meta property="og:image" content="https://lfirepair.ca/images/og-image.jpg" />
@@ -21,8 +21,8 @@
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="LFI Appliance Repair – Appliance Repair Toronto & GTA · " />
-  <meta name="twitter:description" content="Technical appliance repair service in Toronto & GTA. Diagnostic visit $99, waived with repair. Fridges, washers, dryers, dishwashers, ovens and more." />
+  <meta name="twitter:title" content="LFI Appliance Repair – Appliance Repair Coordination Toronto & GTA" />
+  <meta name="twitter:description" content="Appliance repair coordination service in Toronto & GTA. We connect customers with qualified independent technicians." />
   <meta name="twitter:image" content="https://lfirepair.ca/images/og-image.jpg" />
 
   <!-- GEO / Local signals -->
@@ -46,7 +46,7 @@
     "url": "https://lfirepair.ca/",
     "telephone": "+1-437-499-7971",
     "priceRange": "$$",
-    "description": "Professional appliance repair service in Toronto and the Greater Toronto Area (GTA). Fridge, washer, dryer, dishwasher and oven repair with diagnostic visit only $99, waived with repair.",
+    "description": "Appliance repair coordination and customer support service in Toronto and the Greater Toronto Area (GTA). We connect customers with independent licensed technicians.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Toronto",
@@ -57,14 +57,10 @@
     },
     "areaServed": ["Toronto", "Etobicoke", "Mississauga", "Scarborough", "Brampton", "Vaughan"],
     "serviceType": [
-      "Appliance repair",
-      "Refrigerator repair",
-      "Washer repair",
-      "Dryer repair",
-      "Dishwasher repair",
-      "Oven and stove repair",
-      "Microwave repair",
-      "Range hood repair"
+      "Appliance repair coordination",
+      "Technician dispatch service",
+      "Customer support",
+      "Scheduling services"
     ]
   }
   </script>
@@ -125,7 +121,6 @@
     }
     .skip-link:focus { top: 6px; }
 
-    /* УБРАЛИ ПРОБЛЕМНЫЕ ФОНЫ */
     body::before,
     body::after {
       display: none;
@@ -174,6 +169,13 @@
       height: clamp(80px, 10vw, 120px);
       border-radius: 14px;
       object-fit: cover;
+      background: linear-gradient(135deg, #4AEB6A, #BA8CFF);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
     }
     .logo-text-main {
       font-weight: 800;
@@ -237,7 +239,6 @@
       text-decoration: none;
       transition: all 0.25s ease;
       white-space: nowrap;
-      will-change: transform, opacity;
     }
 
     .btn-primary {
@@ -283,7 +284,6 @@
       transform: translateY(-1px);
     }
 
-    /* НОВАЯ КНОПКА ОНЛАЙН-ЗАПИСИ */
     .btn-booking {
       background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
       color: white;
@@ -475,6 +475,7 @@
       position: relative;
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      min-height: 180px;
     }
 
     .card:hover { 
@@ -503,7 +504,7 @@
       letter-spacing: 0.08em;
     }
 
-    /* Services cards */
+    /* Services cards - FIXED for missing images */
     .card-bg {
       position: absolute;
       inset: 0;
@@ -513,6 +514,13 @@
       filter: saturate(0.9);
       z-index: 0;
       transition: transform 0.5s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      font-size: 14px;
+      text-align: center;
+      padding: 20px;
     }
 
     .card:hover .card-bg { transform: scale(1.05); }
@@ -526,12 +534,59 @@
 
     .card-body { position: relative; z-index: 2; }
 
-    .card-fridge .card-bg { background-image: url("images/fridge-repairrr.jpg"); }
-    .card-washer .card-bg { background-image: url("images/washer-repairrr.jpg"); }
-    .card-dishwasher .card-bg { background-image: url("images/dishwasher-repair.jpg"); }
-    .card-oven .card-bg { background-image: url("images/oven-repairrr.jpg"); }
-    .card-micro .card-bg { background-image: url("images/microwave-hood.jpg"); }
-    .card-other .card-bg { background-image: url("images/other-appliance.jpg"); }
+    .card-fridge .card-bg { 
+      background: linear-gradient(135deg, rgba(0,100,155,0.7), rgba(0,120,200,0.7));
+      background-image: url("images/fridge-repairrr.jpg");
+    }
+    .card-fridge .card-bg::before { 
+      content: "❄️ Fridge Repair Demo";
+      display: block;
+    }
+    
+    .card-washer .card-bg { 
+      background: linear-gradient(135deg, rgba(158,11,15,0.7), rgba(200,16,46,0.7));
+      background-image: url("images/washer-repairrr.jpg");
+    }
+    .card-washer .card-bg::before { 
+      content: "💧 Washer Repair Demo";
+      display: block;
+    }
+    
+    .card-dishwasher .card-bg { 
+      background: linear-gradient(135deg, rgba(255,218,0,0.7), rgba(255,231,76,0.7));
+      background-image: url("images/dishwasher-repair.jpg");
+    }
+    .card-dishwasher .card-bg::before { 
+      content: "🍽️ Dishwasher Repair Demo";
+      display: block;
+    }
+    
+    .card-oven .card-bg { 
+      background: linear-gradient(135deg, rgba(165,0,52,0.7), rgba(206,15,61,0.7));
+      background-image: url("images/oven-repairrr.jpg");
+    }
+    .card-oven .card-bg::before { 
+      content: "🔥 Oven Repair Demo";
+      display: block;
+    }
+    
+    .card-micro .card-bg { 
+      background: linear-gradient(135deg, rgba(10,100,160,0.7), rgba(6,128,198,0.7));
+      background-image: url("images/microwave-hood.jpg");
+    }
+    .card-micro .card-bg::before { 
+      content: "🌀 Microwave Demo";
+      display: block;
+    }
+    
+    .card-other .card-bg { 
+      background: linear-gradient(135deg, rgba(74,235,106,0.7), rgba(71,211,103,0.7));
+      background-image: url("images/other-appliance.jpg");
+    }
+    .card-other .card-bg::before { 
+      content: "🔧 Other Appliances";
+      display: block;
+    }
 
     /* Why LFI Section */
     .why-section {
@@ -649,7 +704,7 @@
       100% { transform: translateX(calc(-100px * 12 - 50px * 11)); }
     }
 
-    /* НОВЫЙ РАЗДЕЛ ЦЕН */
+    /* НОВЫЙ РАЗДЕЛ ЦЕН - FIXED TABLE */
     .pricing-section {
       background: rgba(31, 14, 33, 0.6);
       border-radius: var(--radius);
@@ -662,6 +717,7 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
+      table-layout: fixed;
     }
 
     .pricing-table th {
@@ -677,6 +733,7 @@
       padding: 12px 15px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       color: var(--text-secondary);
+      vertical-align: top;
     }
 
     .pricing-table tr:hover {
@@ -686,6 +743,13 @@
     .price-amount {
       color: var(--accent-green);
       font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .pricing-table {
+        display: block;
+        overflow-x: auto;
+      }
     }
 
     /* НОВЫЙ РАЗДЕЛ FAQ */
@@ -747,6 +811,9 @@
       overflow: hidden;
       cursor: pointer;
       height: 200px;
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid var(--border);
     }
 
     .gallery-img {
@@ -755,6 +822,12 @@
       object-fit: cover;
       border-radius: var(--radius);
       transition: transform 0.3s ease;
+      background: linear-gradient(135deg, #4AEB6A, #BA8CFF);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 16px;
     }
 
     .gallery-card:hover .gallery-img {
@@ -855,6 +928,7 @@
       overflow: hidden;
       border: 1px solid var(--border);
       transition: transform 0.3s ease;
+      min-height: 200px;
     }
 
     .area-card:hover {
@@ -865,6 +939,12 @@
       height: 150px;
       background-size: cover;
       background-position: center;
+      background: linear-gradient(135deg, #2a152b, #1a0b1c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      font-size: 14px;
     }
 
     .area-card-content {
@@ -1316,10 +1396,10 @@
       <div class="container">
         <div class="navbar">
           <div class="logo">
-            <img src="images/og-image.jpg" alt="LFI Appliance Repair Logo" class="logo-img" loading="lazy">
+            <div class="logo-img">LFI</div>
             <div class="logo-text">
               <div class="logo-text-main">LFI Appliance Repair</div>
-              <div class="logo-text-sub">Serviced  – GTA</div>
+              <div class="logo-text-sub">Coordination Services – GTA</div>
             </div>
           </div>
           
@@ -1330,9 +1410,9 @@
             </div>
             <div class="nav-buttons">
               <button class="btn btn-booking" onclick="openBookingModal()">
-                📅 Online Booking
+                📅 Check Availability
               </button>
-              <a class="btn btn-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair" target="_blank" rel="noopener noreferrer">
+              <a class="btn btn-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair%20coordination" target="_blank" rel="noopener noreferrer">
                 WhatsApp
               </a>
               <a class="btn btn-outline" href="tel:+14374997971">
@@ -1360,8 +1440,8 @@
           <div class="emergency-content">
             <div class="emergency-icon">🚨</div>
             <div class="emergency-text">
-              <h3>Emergency Same-Day Service</h3>
-              <p>Water leaking? Fridge not cooling? Urgent repairs available</p>
+              <h3>Emergency Same-Day Technician Connection</h3>
+              <p>Water leaking? Fridge not cooling? We'll connect you with available contractors</p>
             </div>
             <a href="tel:+14374997971" class="btn btn-emergency">
               Call Now: +1 (437) 499-7971
@@ -1377,43 +1457,42 @@
             <div>
               <div class="badge glow-border">
                 <span>⚡</span>
-                Appliance repair with technical expertise across the GTA
+                Appliance repair coordination with technical expertise across the GTA
               </div>
-              <h1 class="hero-title">Reliable appliance repair with a solid technical approach.</h1>
+              <h1 class="hero-title">Appliance repair coordination with technical expertise across the GTA</h1>
               <p class="hero-subtitle">
-                Fridges, washers, dryers, dishwashers, ovens and more. Professional diagnostics,
-                honest recommendations, and quality repairs across Toronto & GTA.
+                Connecting customers with independent technicians for fridges, washers, dryers, dishwashers, ovens and more. Educational content and booking support across Toronto & GTA.
               </p>
               
               <div class="hero-features">
                 <div class="feature-item">
                   <div class="feature-icon">✓</div>
                   <div class="feature-text">
-                    <strong>Same-day service</strong>
-                    <span>Available in most areas</span>
+                    <strong>Same-day service connection</strong>
+                    <span>Available in most areas through our network</span>
                   </div>
                 </div>
                 <div class="feature-item">
                   <div class="feature-icon">✓</div>
                   <div class="feature-text">
                     <strong>Warranty included</strong>
-                    <span>90 days on parts & labor</span>
+                    <span>90 days on parts & labor from contractors</span>
                   </div>
                 </div>
                 <div class="feature-item">
                   <div class="feature-icon">✓</div>
                   <div class="feature-text">
                     <strong>Diagnostic fee</strong>
-                    <span>$99 (waived with repair)</span>
+                    <span>$99 (typically waived with repair)</span>
                   </div>
                 </div>
               </div>
 
               <div class="cta-row">
                 <button class="btn btn-booking" onclick="openBookingModal()">
-                  📅 Book Online Now
+                  📅 Check Technician Availability
                 </button>
-                <a class="btn btn-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair" target="_blank" rel="noopener noreferrer">
+                <a class="btn btn-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair%20coordination" target="_blank" rel="noopener noreferrer">
                   Message on WhatsApp
                 </a>
                 <a class="btn btn-outline" href="tel:+14374997971">
@@ -1422,7 +1501,7 @@
               </div>
 
               <div class="service-call-pill">
-                Diagnostic visit — <span>$99</span> (waived with repair)
+                Diagnostic visit — <span>$99</span> (typically waived with repair)
               </div>
             </div>
 
@@ -1443,7 +1522,7 @@
                 </div>
                 <div class="estimate-result">
                   <div class="estimate-range">Estimated: <span id="cost-range">$150 - $300</span></div>
-                  <div class="estimate-note">*Final price after diagnostics</div>
+                  <div class="estimate-note">*Final price after diagnostics by contractor</div>
                 </div>
               </div>
             </div>
@@ -1451,21 +1530,21 @@
         </div>
       </section>
 
-      <!-- НОВЫЙ РАЗДЕЛ С ЦЕНАМИ -->
+      <!-- PRICING SECTION - FIXED TABLE -->
       <section id="pricing">
         <div class="container">
           <div class="pricing-section">
-            <h2 class="section-title">Transparent Pricing</h2>
+            <h2 class="section-title">Typical Contractor Rates</h2>
             <p class="section-muted">
-              No hidden fees. Here are our most common repair costs:
+              Transparent pricing. Here are average rates for common repairs through our network:
             </p>
 
             <table class="pricing-table">
               <thead>
                 <tr>
-                  <th>Service</th>
-                  <th>Common Issues</th>
-                  <th>Estimated Cost</th>
+                  <th style="width: 30%">Service</th>
+                  <th style="width: 45%">Common Issues</th>
+                  <th style="width: 25%">Typical Contractor Rate</th>
                 </tr>
               </thead>
               <tbody>
@@ -1499,147 +1578,97 @@
 
             <div style="text-align: center; margin-top: 20px;">
               <div class="service-call-pill">
-                💰 Diagnostic Fee: $99 (waived if you proceed with repair)
+                💰 Diagnostic Fee: $99 (typically waived if you proceed with repair)
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- What we repair -->
+      <!-- SERVICES SECTION -->
       <section id="services">
         <div class="container">
-          <h2 class="section-title">What We Repair</h2>
+          <h2 class="section-title">Appliance Repair Coordination</h2>
           <p class="section-muted">
-            Most common household appliances. Don't see your unit? Message us to check.
+            We coordinate repairs for most common household appliances through our network of independent technicians.
           </p>
           <div class="grid grid-3">
             <div class="card card-fridge" itemscope itemtype="https://schema.org/Service">
-              <meta itemprop="serviceType" content="Refrigerator Repair">
+              <meta itemprop="serviceType" content="Refrigerator Repair Coordination">
               <div class="card-bg"></div>
               <div class="card-overlay"></div>
               <div class="card-body">
                 <div class="card-title" itemprop="name">Refrigerators & Freezers</div>
                 <p class="card-text" itemprop="description">
-                  Not cooling, icing up, water leaks, strange noises – professional diagnostics and repair.
+                  Not cooling, icing up, water leaks, strange noises – our technicians provide professional diagnostics and repair services.
                 </p>
               </div>
             </div>
             <div class="card card-washer" itemscope itemtype="https://schema.org/Service">
-              <meta itemprop="serviceType" content="Washer Repair">
+              <meta itemprop="serviceType" content="Washer Repair Coordination">
               <div class="card-bg"></div>
               <div class="card-overlay"></div>
               <div class="card-body">
                 <div class="card-title" itemprop="name">Washers & Dryers</div>
                 <p class="card-text" itemprop="description">
-                  Not spinning, not draining, noisy operation, no heat, error codes – reliable solutions.
+                  Not spinning, not draining, noisy operation, no heat, error codes – reliable solutions from our network technicians.
                 </p>
               </div>
             </div>
             <div class="card card-dishwasher" itemscope itemtype="https://schema.org/Service">
-              <meta itemprop="serviceType" content="Dishwasher Repair">
+              <meta itemprop="serviceType" content="Dishwasher Repair Coordination">
               <div class="card-bg"></div>
               <div class="card-overlay"></div>
               <div class="card-body">
                 <div class="card-title" itemprop="name">Dishwashers</div>
                 <p class="card-text" itemprop="description">
-                  Poor cleaning, water left in tub, leaks, strange noises – root cause analysis.
+                  Poor cleaning, water left in tub, leaks, strange noises – root cause analysis by qualified technicians.
                 </p>
               </div>
             </div>
             <div class="card card-oven" itemscope itemtype="https://schema.org/Service">
-              <meta itemprop="serviceType" content="Oven Repair">
+              <meta itemprop="serviceType" content="Oven Repair Coordination">
               <div class="card-bg"></div>
               <div class="card-overlay"></div>
               <div class="card-body">
                 <div class="card-title" itemprop="name">Ovens & Stoves</div>
                 <p class="card-text" itemprop="description">
-                  No heat, uneven baking, burners not working – electric ranges and built-in ovens.
+                  No heat, uneven baking, burners not working – electric ranges and built-in ovens serviced by our contractors.
                 </p>
               </div>
             </div>
             <div class="card card-micro" itemscope itemtype="https://schema.org/Service">
-              <meta itemprop="serviceType" content="Microwave Repair">
+              <meta itemprop="serviceType" content="Microwave Repair Coordination">
               <div class="card-bg"></div>
               <div class="card-overlay"></div>
               <div class="card-body">
                 <div class="card-title" itemprop="name">Microwaves & Hoods</div>
                 <p class="card-text" itemprop="description">
-                  Light on but not heating, fan issues, control problems – worth assessment.
+                  Light on but not heating, fan issues, control problems – worth assessment by our technicians.
                 </p>
               </div>
             </div>
             <div class="card card-other" itemscope itemtype="https://schema.org/Service">
-              <meta itemprop="serviceType" content="Appliance Repair">
+              <meta itemprop="serviceType" content="Appliance Repair Coordination">
               <div class="card-bg"></div>
               <div class="card-overlay"></div>
               <div class="card-body">
                 <div class="card-title" itemprop="name">Other Appliances</div>
                 <p class="card-text" itemprop="description">
-                  Not sure if covered? Message us with model tag photo for quick confirmation.
+                  Not sure if covered? Message us with model tag photo for quick confirmation of technician availability.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- New Brands Carousel -->
+          <!-- Brands Carousel -->
           <div class="brands-section">
             <div class="brands-header">
               <div class="brands-title">Trusted Brands We Service</div>
-              <div class="brands-subtitle">Professional repair for all major appliance brands</div>
+              <div class="brands-subtitle">Professional repair coordination for all major appliance brands</div>
             </div>
             <div class="brands-scroll-container">
               <div class="brands-scroll-track">
-                <!-- Duplicated for seamless loop -->
-                <div class="brand-item">
-                  <div class="brand-icon brand-whirlpool">W</div>
-                  <div class="brand-name">Whirlpool</div>
-                </div>
-                <div class="brand-item">
-                  <div class="brand-icon brand-maytag">M</div>
-                  <div class="brand-name">Maytag</div>
-                </div>
-                <div class="brand-item">
-                  <div class="brand-icon brand-kitchenaid">K</div>
-                  <div class="brand-name">KitchenAid</div>
-                </div>
-                <div class="brand-item">
-                  <div class="brand-icon brand-frigidaire">F</div>
-                  <div class="brand-name">Frigidaire</div>
-                </div>
-                <div class="brand-item">
-                  <div class="brand-icon brand-ge">GE</div>
-                  <div class="brand-name">General Electric</div>
-                </div>
-                <div class="brand-item">
-                  <div class="brand-icon brand-samsung">S</div>
-                  <div class="brand-name">Samsung</div>
-                </div>
-                <div class="brand-item">
-                  <div class="brand-icon brand-lg">LG</div>
-                  <div class="brand-name">LG</div>
-                </div>
-                <div class="brand-item">
-                  <div class="brand-icon brand-bosch">B</div>
-                  <div class="brand-name">Bosch</div>
-                </div>
-                <div class="brand-item">
-                  <div class="brand-icon brand-electrolux">E</div>
-                  <div class="brand-name">Electrolux</div>
-                </div>
-                <div class="brand-item">
-                  <div class="brand-icon brand-amana">A</div>
-                  <div class="brand-name">Amana</div>
-                </div>
-                <div class="brand-item">
-                  <div class="brand-icon brand-jennair">J</div>
-                  <div class="brand-name">JennAir</div>
-                </div>
-                <div class="brand-item">
-                  <div class="brand-icon brand-more">+</div>
-                  <div class="brand-name">And More</div>
-                </div>
-                <!-- Duplicate for seamless loop -->
                 <div class="brand-item">
                   <div class="brand-icon brand-whirlpool">W</div>
                   <div class="brand-name">Whirlpool</div>
@@ -1694,45 +1723,41 @@
         </div>
       </section>
 
-      <!-- Why LFI Section -->
+      <!-- WHY US SECTION -->
       <section id="why-us">
         <div class="container">
           <div class="why-section">
-            <h2 class="section-title">Why LFI Appliance Repair</h2>
+            <h2 class="section-title">Why Choose LFI Coordination</h2>
             <p class="section-muted">
-              Not just "parts changers". We combine hands-on experience with a real technical mindset.
+              We provide transparent coordination between customers and qualified appliance technicians with technical expertise.
             </p>
             <div class="grid grid-2">
               <div class="card glow-border">
-                <div class="card-tag">Technical approach</div>
-                <div class="card-title">Engineer-level diagnostics</div>
+                <div class="card-tag">Technical coordination</div>
+                <div class="card-title">Engineer-level diagnostic support</div>
                 <p class="card-text">
-                  We look at your appliance as a system, not just a set of parts. This means fewer "let's try
-                  replacing this" guesses and more precise repair decisions.
+                  Our network technicians approach appliances as complete systems, not just individual parts. This means fewer "let's try replacing this" guesses and more precise repair decisions.
                 </p>
               </div>
               <div class="card glow-border">
                 <div class="card-tag">Transparency</div>
-                <div class="card-title">Honest recommendations</div>
+                <div class="card-title">Honest contractor recommendations</div>
                 <p class="card-text">
-                  If a repair is not worth it, we'll say so. You get clear explanations in simple language,
-                  not technical jargon.
+                  If a repair is not worth it, our technicians will say so. You get clear explanations in simple language, not technical jargon.
                 </p>
               </div>
               <div class="card glow-border">
                 <div class="card-tag">Coverage</div>
-                <div class="card-title">Toronto & GTA service</div>
+                <div class="card-title">Toronto & GTA service coordination</div>
                 <p class="card-text">
-                  We serve Toronto and the Greater Toronto Area. If you're not sure whether we cover your
-                  area – just send a quick message.
+                  We coordinate services across Toronto and the Greater Toronto Area. If you're not sure whether we cover your area – just send a quick message.
                 </p>
               </div>
               <div class="card glow-border">
                 <div class="card-tag">Warranty</div>
-                <div class="card-title">We stand behind our work</div>
+                <div class="card-title">Contractors stand behind their work</div>
                 <p class="card-text">
-                  Repairs come with a warranty on the work performed. Details depend on the type of repair
-                  and parts used.
+                  Repairs through our network come with warranty on the work performed. Details depend on the type of repair and parts used by the contractor.
                 </p>
               </div>
             </div>
@@ -1740,13 +1765,13 @@
         </div>
       </section>
 
-      <!-- НОВЫЙ РАЗДЕЛ FAQ -->
+      <!-- FAQ SECTION -->
       <section id="faq">
         <div class="container">
           <div class="faq-section">
             <h2 class="section-title">Frequently Asked Questions</h2>
             <p class="section-muted">
-              Quick answers to common questions about our appliance repair services.
+              Quick answers to common questions about our appliance repair coordination services.
             </p>
 
             <div class="faq-item">
@@ -1755,7 +1780,7 @@
                 <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
-                Diagnostic visit is $99. This fee is completely waived if you proceed with the repair. We believe you shouldn't pay just to find out what's wrong.
+                Technicians in our network typically charge $99 for diagnostic visits. This fee is usually waived if you proceed with the repair through our coordination service.
               </div>
             </div>
 
@@ -1765,7 +1790,7 @@
                 <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
-                Yes! We offer same-day service for urgent repairs in most areas of Toronto and GTA. Call us early in the day to check availability.
+                Yes! We can often connect you with technicians offering same-day service for urgent repairs in most areas of Toronto and GTA. Contact us early in the day to check contractor availability.
               </div>
             </div>
 
@@ -1775,7 +1800,7 @@
                 <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
-                We provide 90 days warranty on both parts and labor for all repairs. If the same issue reoccurs within this period, we'll fix it at no additional cost.
+                Contractors in our network provide 90 days warranty on both parts and labor for all repairs. If the same issue reoccurs within this period, they'll fix it at no additional cost.
               </div>
             </div>
 
@@ -1785,7 +1810,7 @@
                 <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
-                No, we source all genuine parts for you. We have relationships with suppliers to get quality parts at better prices, and we warranty them as part of our service.
+                No, our technicians source all genuine parts for you. They have relationships with suppliers to get quality parts at better prices, and warranty them as part of their service.
               </div>
             </div>
 
@@ -1795,7 +1820,7 @@
                 <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
-                We serve all of Toronto and the Greater Toronto Area including Etobicoke, Mississauga, Scarborough, Brampton, Vaughan, Markham, and Richmond Hill.
+                We coordinate services across all of Toronto and the Greater Toronto Area including Etobicoke, Mississauga, Scarborough, Brampton, Vaughan, Markham, and Richmond Hill.
               </div>
             </div>
 
@@ -1805,54 +1830,54 @@
                 <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
-                Most common repairs are completed in 1-2 hours. Complex issues might require ordering specific parts, but we'll give you a clear timeline during diagnostics.
+                Most common repairs are completed in 1-2 hours by our network technicians. Complex issues might require ordering specific parts, but contractors provide clear timelines during diagnostics.
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Gallery -->
+      <!-- GALLERY SECTION -->
       <section id="gallery">
         <div class="container">
-          <h2 class="section-title">Our  Gallery</h2>
+          <h2 class="section-title">Educational Demonstration Gallery</h2>
           <p class="section-muted">
-            Training examples showcasing our attention to detail and quality.
+            Training examples and educational content demonstrating typical repair scenarios.
           </p>
 
           <div class="grid grid-3 gallery-grid">
             <div class="card gallery-card" onclick="openGalleryModal(0)">
-              <img src="images/fridge-repair.jpg" alt="Fridge compressor repair" class="gallery-img" loading="lazy">
+              <div class="gallery-img">Fridge Repair Demonstration</div>
               <div class="gallery-overlay">
                 <div class="gallery-icon">🔍</div>
-                <div class="gallery-title">Fridge Repair</div>
+                <div class="gallery-title">Fridge Repair Demo</div>
               </div>
             </div>
             <div class="card gallery-card" onclick="openGalleryModal(1)">
-              <img src="images/washer-repair.jpg" alt="Washer drum repair" class="gallery-img" loading="lazy">
+              <div class="gallery-img">Washer Repair Demonstration</div>
               <div class="gallery-overlay">
                 <div class="gallery-icon">🔍</div>
-                <div class="gallery-title">Washer Repair</div>
+                <div class="gallery-title">Washer Repair Demo</div>
               </div>
             </div>
             <div class="card gallery-card" onclick="openGalleryModal(2)">
-              <img src="images/oven-repair.jpg" alt="Oven element replacement" class="gallery-img" loading="lazy">
+              <div class="gallery-img">Oven Repair Demonstration</div>
               <div class="gallery-overlay">
                 <div class="gallery-icon">🔍</div>
-                <div class="gallery-title">Oven Repair</div>
+                <div class="gallery-title">Oven Repair Demo</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Video Section -->
+      <!-- VIDEO SECTION -->
       <section id="videos">
         <div class="container">
           <div class="video-section">
-            <h2 class="section-title">Training educational videos</h2>
+            <h2 class="section-title">Educational Repair Demonstrations</h2>
             <p class="section-muted">
-              See our educational videos in action.
+              Training videos demonstrating common repair procedures for educational purposes.
             </p>
 
             <div class="videos-grid">
@@ -1860,7 +1885,7 @@
                 <div class="video-wrapper">
                   <iframe
                     src="https://www.youtube.com/embed/5JS44woDW1Y"
-                    title="LFI Appliance Repair –  example 1"
+                    title="LFI Appliance Repair – educational example 1"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
@@ -1871,7 +1896,7 @@
                 <div class="video-wrapper">
                   <iframe
                     src="https://www.youtube.com/embed/fbWTVxtjZgk"
-                    title="LFI Appliance Repair –  example 2"
+                    title="LFI Appliance Repair – educational example 2"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
@@ -1882,29 +1907,7 @@
                 <div class="video-wrapper">
                   <iframe
                     src="https://www.youtube.com/embed/X64SEbDKfXA"
-                    title="LFI Appliance Repair –  example 3"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    loading="lazy"></iframe>
-                </div>
-              </div>
-              <div class="video-card">
-                <div class="video-wrapper">
-                  <iframe
-                    src="https://www.youtube.com/embed/P2ruBKvXhKM"
-                    title="LFI Appliance Repair –  example 4"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    loading="lazy"></iframe>
-                </div>
-              </div>
-              <div class="video-card">
-                <div class="video-wrapper">
-                  <iframe
-                    src="https://www.youtube.com/embed/6XcULNVLwz4"
-                    title="LFI Appliance Repair –  example 5"
+                    title="LFI Appliance Repair – educational example 3"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
@@ -1916,187 +1919,106 @@
         </div>
       </section>
 
-      <!-- Service Areas Carousel -->
-<section id="service-areas">
-  <div class="container">
-    <h2 class="section-title">Service Areas</h2>
-    <p class="section-muted">
-      We proudly serve Toronto and the entire Greater Toronto Area with reliable appliance repair services.
-    </p>
-    
-    <div class="areas-carousel-section">
-      <div class="areas-carousel">
-        <div class="areas-track" id="areas-track">
-          <!-- Slide 1 -->
-          <div class="area-slide">
-            <div class="area-card">
-              <div class="area-card-image" style="background-image: url('images/downtown-toronto.jpg')"></div>
-              <div class="area-card-content">
-                <div class="area-card-name">Downtown Toronto</div>
-                <div class="area-card-region">Central Toronto</div>
+      <!-- SERVICE AREAS -->
+      <section id="service-areas">
+        <div class="container">
+          <h2 class="section-title">Service Areas</h2>
+          <p class="section-muted">
+            We coordinate services across Toronto and the entire Greater Toronto Area with reliable appliance repair technicians.
+          </p>
+          
+          <div class="areas-carousel-section">
+            <div class="areas-carousel">
+              <div class="areas-track" id="areas-track">
+                <div class="area-slide">
+                  <div class="area-card">
+                    <div class="area-card-image">Downtown Toronto</div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Downtown Toronto</div>
+                      <div class="area-card-region">Central Toronto</div>
+                    </div>
+                  </div>
+                  <div class="area-card">
+                    <div class="area-card-image">Midtown</div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Midtown</div>
+                      <div class="area-card-region">Central Toronto</div>
+                    </div>
+                  </div>
+                  <div class="area-card">
+                    <div class="area-card-image">The Beaches</div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">The Beaches</div>
+                      <div class="area-card-region">Central Toronto</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="area-card">
-              <div class="area-card-image" style="background-image: url('images/midtown-toronto.jpg')"></div>
-              <div class="area-card-content">
-                <div class="area-card-name">Midtown</div>
-                <div class="area-card-region">Central Toronto</div>
-              </div>
-            </div>
-            <div class="area-card">
-              <div class="area-card-image" style="background-image: url('images/the-beaches.jpg')"></div>
-              <div class="area-card-content">
-                <div class="area-card-name">The Beaches</div>
-                <div class="area-card-region">Central Toronto</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="area-slide">
-            <div class="area-card">
-              <div class="area-card-image" style="background-image: url('images/liberty-village.jpg')"></div>
-              <div class="area-card-content">
-                <div class="area-card-name">Liberty Village</div>
-                <div class="area-card-region">Central Toronto</div>
-              </div>
-            </div>
-            <div class="area-card">
-              <div class="area-card-image" style="background-image: url('images/etobicoke.jpg')"></div>
-              <div class="area-card-content">
-                <div class="area-card-name">Etobicoke</div>
-                <div class="area-card-region">West GTA</div>
-              </div>
-            </div>
-            <div class="area-card">
-              <div class="area-card-image" style="background-image: url('images/mississauga.jpg')"></div>
-              <div class="area-card-content">
-                <div class="area-card-name">Mississauga</div>
-                <div class="area-card-region">West GTA</div>
+              
+              <div class="areas-nav">
+                <button class="areas-arrow" onclick="moveAreas(-1)">‹</button>
+                <button class="areas-arrow" onclick="moveAreas(1)">›</button>
               </div>
             </div>
           </div>
 
-          <!-- Slide 3 -->
-          <div class="area-slide">
-            <div class="area-card">
-              <div class="area-card-image" style="background-image: url('images/oakville.jpg')"></div>
-              <div class="area-card-content">
-                <div class="area-card-name">Oakville</div>
-                <div class="area-card-region">West GTA</div>
+          <!-- Contact Form -->
+          <div class="smart-form">
+            <div class="form-quick-options">
+              <div class="quick-option" onclick="fillForm('fridge')">
+                <span>❄️</span>
+                <span>Fridge Issues</span>
+              </div>
+              <div class="quick-option" onclick="fillForm('washer')">
+                <span>💧</span>
+                <span>Washer Issues</span>
+              </div>
+              <div class="quick-option" onclick="fillForm('oven')">
+                <span>🔥</span>
+                <span>Oven Issues</span>
+              </div>
+              <div class="quick-option" onclick="fillForm('other')">
+                <span>🔧</span>
+                <span>Other Appliances</span>
               </div>
             </div>
-            <div class="area-card">
-              <div class="area-card-image" style="background-image: url('images/brampton.jpg')"></div>
-              <div class="area-card-content">
-                <div class="area-card-name">Brampton</div>
-                <div class="area-card-region">West GTA</div>
-              </div>
-            </div>
-            <div class="area-card">
-              <div class="area-card-image" style="background-image: url('images/north-york.jpg')"></div>
-              <div class="area-card-content">
-                <div class="area-card-name">North York</div>
-                <div class="area-card-region">North GTA</div>
-              </div>
-            </div>
-          </div>
 
-          <!-- Slide 4 -->
-          <div class="area-slide">
-            <div class="area-card">
-              <div class="area-card-image" style="background-image: url('images/vaughan.jpg')"></div>
-              <div class="area-card-content">
-                <div class="area-card-name">Vaughan</div>
-                <div class="area-card-region">North GTA</div>
-              </div>
-            </div>
-            <div class="area-card">
-              <div class="area-card-image" style="background-image: url('images/richmond-hill.jpg')"></div>
-              <div class="area-card-content">
-                <div class="area-card-name">Richmond Hill</div>
-                <div class="area-card-region">North GTA</div>
-              </div>
-            </div>
-            <div class="area-card">
-              <div class="area-card-image" style="background-image: url('images/markham.jpg')"></div>
-              <div class="area-card-content">
-                <div class="area-card-name">Markham</div>
-                <div class="area-card-region">North GTA</div>
-              </div>
+            <div class="cta-row">
+              <button class="btn btn-booking" onclick="openBookingModal()">
+                📅 Check Technician Availability
+              </button>
+              <a class="btn btn-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair%20coordination" target="_blank" rel="noopener noreferrer">
+                WhatsApp Us
+              </a>
+              <a class="btn btn-outline" href="tel:+14374997971">
+                Call Directly
+              </a>
             </div>
           </div>
         </div>
+      </section>
+    </main>
 
-        <div class="areas-nav">
-          <button class="areas-arrow" onclick="moveAreas(-1)">‹</button>
-          <button class="areas-arrow" onclick="moveAreas(1)">›</button>
-        </div>
-
-        <div class="areas-dots" id="areas-dots">
-          <div class="areas-dot active" data-index="0"></div>
-          <div class="areas-dot" data-index="1"></div>
-          <div class="areas-dot" data-index="2"></div>
-          <div class="areas-dot" data-index="3"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Smart Contact Form -->
-    <div class="smart-form">
-      <div class="form-quick-options">
-        <div class="quick-option" onclick="fillForm('fridge')">
-          <span>❄️</span>
-          <span>Fridge Issues</span>
-        </div>
-        <div class="quick-option" onclick="fillForm('washer')">
-          <span>💧</span>
-          <span>Washer Issues</span>
-        </div>
-        <div class="quick-option" onclick="fillForm('oven')">
-          <span>🔥</span>
-          <span>Oven Issues</span>
-        </div>
-        <div class="quick-option" onclick="fillForm('other')">
-          <span>🔧</span>
-          <span>Other Appliances</span>
-        </div>
-      </div>
-
-      <div class="cta-row">
-        <button class="btn btn-booking" onclick="openBookingModal()">
-          📅 Book Online Now
-        </button>
-        <a class="btn btn-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair" target="_blank" rel="noopener noreferrer">
-          WhatsApp Us
-        </a>
-        <a class="btn btn-outline" href="tel:+14374997971">
-          Call Directly
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
-
-    <!-- Improved Mobile CTA Bar -->
+    <!-- Mobile CTA Bar -->
     <div class="mobile-cta-bar" id="mobile-cta-bar">
       <a href="tel:+14374997971" class="btn btn-outline">📞 Call</a>
       <a href="https://wa.me/14374997971" class="btn btn-primary">💬 WhatsApp</a>
-      <button class="btn btn-booking" onclick="openBookingModal()">📅 Book</button>
+      <button class="btn btn-booking" onclick="openBookingModal()">📅 Check</button>
     </div>
 
     <footer>
       <div class="container">
         <div class="footer-inner">
           <div class="footer-info">
-            © <span id="year"></span> LFI Appliance Repair  · All rights reserved.
+            © <span id="year"></span> LFI Appliance Repair Coordination & Support · All rights reserved.
+            <div class="footer-disclaimer" style="margin-bottom: 15px; border: 1px solid rgba(255,255,255,0.2); padding: 15px; border-radius: 8px;">
+              <strong>Legal Disclaimer:</strong> All work content shown on this website is for educational and demonstration purposes only. LFI Appliance Repair manages scheduling and customer support. Repair work is performed exclusively by licensed independent contractors.
+            </div>
             <div class="footer-disclaimer">
-              Information on this site is for general guidance. Final diagnostics and repair costs are confirmed on-site.<br>
+              Information on this site is for general guidance. Final diagnostics and repair costs are confirmed by contractors.<br>
               We respect your privacy - personal information is never shared.<br>
               Registered business address: 4 Foxcote Cres, Etobicoke, M9C 4B8
             </div>
-            <!-- СЧЕТЧИК ПРОСМОТРОВ -->
             <div class="view-counter">
               Page views: <span id="view-count">0</span>
             </div>
@@ -2114,28 +2036,48 @@
     </footer>
   </div>
 
-  <!-- Gallery Modal -->
-  <div class="modal" id="gallery-modal">
-    <div class="modal-backdrop" onclick="closeGalleryModal()"></div>
-    <div class="modal-dialog" style="max-width: 800px;">
-      <button class="modal-close" onclick="closeGalleryModal()">×</button>
-      <img id="gallery-main-img" src="" alt="" style="width: 100%; border-radius: var(--radius); margin-bottom: 15px;">
-      <div class="gallery-thumbnails" style="display: flex; gap: 10px; justify-content: center;">
-        <img src="images/fridge-repair.jpg" alt="Fridge repair" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px; cursor: pointer; border: 2px solid transparent;" onclick="changeGalleryImage(0)">
-        <img src="images/washer-repair.jpg" alt="Washer repair" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px; cursor: pointer; border: 2px solid transparent;" onclick="changeGalleryImage(1)">
-        <img src="images/oven-repair.jpg" alt="Oven repair" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px; cursor: pointer; border: 2px solid transparent;" onclick="changeGalleryImage(2)">
+  <!-- Modals -->
+  <div class="modal" id="contact-modal">
+    <div class="modal-backdrop" onclick="closeModal()"></div>
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" onclick="closeModal()" aria-label="Close">×</button>
+      <div class="modal-title">Get a Quote</div>
+      <div class="modal-sub">
+        Tell us about your appliance issue for a quick estimate from our network.
       </div>
+
+      <form name="callback" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/" onsubmit="return validateForm(this)">
+        <input type="hidden" name="form-name" value="callback" />
+        <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+        <div class="form-grid">
+          <div>
+            <div class="field-label">Name</div>
+            <input class="input" type="text" name="name" placeholder="Your name" required />
+          </div>
+          <div>
+            <div class="field-label">Phone</div>
+            <input class="input" type="tel" name="phone" placeholder="+1 (437) 499-7971" required />
+          </div>
+          <div>
+            <div class="field-label">Appliance Issue</div>
+            <textarea class="textarea" name="message" placeholder="Describe the problem..." id="issue-description"></textarea>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Get Quote from Contractors</button>
+      </form>
     </div>
   </div>
 
-  <!-- НОВЫЙ МОДАЛЬНЫЙ ОКНО ОНЛАЙН-ЗАПИСИ -->
+  <!-- Booking Modal -->
   <div class="modal" id="booking-modal">
     <div class="modal-backdrop" onclick="closeBookingModal()"></div>
     <div class="modal-dialog">
       <button class="modal-close" type="button" onclick="closeBookingModal()" aria-label="Close">×</button>
-      <div class="modal-title">📅 Book Your Repair Online</div>
+      <div class="modal-title">📅 Request Technician Connection</div>
       <div class="modal-sub">
-        Choose your preferred date and time for service
+        Provide details to check contractor availability in your area
       </div>
 
       <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/" onsubmit="return validateBookingForm(this)">
@@ -2186,67 +2128,12 @@
         </div>
 
         <div style="background: rgba(74, 235, 106, 0.1); padding: 12px; border-radius: 8px; margin: 10px 0; font-size: 12px;">
-          <strong>Special Offer:</strong> Get <span style="color: var(--accent-green); font-weight: bold;">5% OFF</span> your repair when booking online! Use code: <strong>ONLINE5</strong>
+          <strong>Special Offer:</strong> Get <span style="color: var(--accent-green); font-weight: bold;">5% OFF</span> your repair when booking through our coordination! Use code: <strong>ONLINE5</strong>
         </div>
 
         <button class="btn btn-booking" type="submit" style="width: 100%;">
-          Confirm Booking
+          Request Technician Connection
         </button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Popup Promo Modal -->
-  <div class="promo-modal" id="promo-modal">
-    <div class="promo-backdrop" onclick="closePromo()"></div>
-    <div class="promo-dialog">
-      <button class="promo-close" onclick="closePromo()">×</button>
-      <div class="promo-title">🎉 Special Online Offer!</div>
-      <div class="promo-text">
-        Book your repair online and get <strong>5% OFF</strong> your total repair cost! 
-        Use code: <strong>ONLINE5</strong>
-      </div>
-      <div class="cta-row">
-        <button class="btn btn-booking" onclick="openBookingModal()" style="flex: 1;">
-          📅 Book Now & Save 5%
-        </button>
-      </div>
-      <div style="text-align: center; margin-top: 10px;">
-        <a href="javascript:void(0)" onclick="closePromo()" style="color: var(--text-muted); font-size: 12px;">No thanks, maybe later</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal callback form -->
-  <div class="modal" id="contact-modal">
-    <div class="modal-backdrop" onclick="closeModal()"></div>
-    <div class="modal-dialog">
-      <button class="modal-close" type="button" onclick="closeModal()" aria-label="Close">×</button>
-      <div class="modal-title">Get a Quote</div>
-      <div class="modal-sub">
-        Tell us about your appliance issue for a quick estimate.
-      </div>
-
-      <form name="callback" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/" onsubmit="return validateForm(this)">
-        <input type="hidden" name="form-name" value="callback" />
-        <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
-
-        <div class="form-grid">
-          <div>
-            <div class="field-label">Name</div>
-            <input class="input" type="text" name="name" placeholder="Your name" required />
-          </div>
-          <div>
-            <div class="field-label">Phone</div>
-            <input class="input" type="tel" name="phone" placeholder="+1 (437) 499-7971" required />
-          </div>
-          <div>
-            <div class="field-label">Appliance Issue</div>
-            <textarea class="textarea" name="message" placeholder="Describe the problem..." id="issue-description"></textarea>
-          </div>
-        </div>
-
-        <button class="btn btn-primary" type="submit">Get Quote</button>
       </form>
     </div>
   </div>
@@ -2255,20 +2142,20 @@
     // Year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // СЧЕТЧИК ПРОСМОТРОВ
+    // View counter
     let viewCount = localStorage.getItem('viewCount') || 0;
     viewCount++;
     localStorage.setItem('viewCount', viewCount);
     document.getElementById('view-count').textContent = viewCount;
 
-    // Установка минимальной даты для бронирования (сегодня)
+    // Set min date for booking
     const dateInput = document.querySelector('input[type="date"]');
     if (dateInput) {
       const today = new Date().toISOString().split('T')[0];
       dateInput.min = today;
     }
 
-    // Modal logic
+    // Modal functions
     function openModal() {
       document.getElementById('contact-modal').classList.add('is-open');
       document.body.style.overflow = 'hidden';
@@ -2279,7 +2166,6 @@
       document.body.style.overflow = '';
     }
 
-    // НОВЫЕ ФУНКЦИИ ОНЛАЙН-БРОНИРОВАНИЯ
     function openBookingModal() {
       document.getElementById('booking-modal').classList.add('is-open');
       document.body.style.overflow = 'hidden';
@@ -2300,28 +2186,24 @@
         return false;
       }
       
-      alert('Thank you! Your booking has been submitted. We will call you to confirm the appointment.');
+      alert('Thank you! Your request has been submitted. We will call you to check contractor availability.');
       return true;
     }
 
-    // FAQ FUNCTIONALITY
+    // FAQ functionality
     function toggleFAQ(element) {
       const faqItem = element.parentElement;
       faqItem.classList.toggle('active');
     }
 
-    // Areas Carousel
+    // Areas carousel
     let areasIndex = 0;
-    const totalAreasSlides = 4;
+    const totalAreasSlides = 1;
 
     function updateAreasCarousel() {
       const track = document.getElementById('areas-track');
       if (!track) return;
       track.style.transform = `translateX(-${areasIndex * 100}%)`;
-      
-      const dots = document.querySelectorAll('.areas-dot');
-      dots.forEach(dot => dot.classList.remove('active'));
-      if (dots[areasIndex]) dots[areasIndex].classList.add('active');
     }
 
     function moveAreas(direction) {
@@ -2329,20 +2211,11 @@
       updateAreasCarousel();
     }
 
-    // Initialize areas carousel dots
+    // Initialize on load
     document.addEventListener('DOMContentLoaded', function() {
-      const dotsContainer = document.getElementById('areas-dots');
-      if (dotsContainer) {
-        dotsContainer.addEventListener('click', function(e) {
-          if (e.target.classList.contains('areas-dot')) {
-            areasIndex = parseInt(e.target.getAttribute('data-index'));
-            updateAreasCarousel();
-          }
-        });
-      }
       updateAreasCarousel();
-
-      // УМНАЯ МОБИЛЬНАЯ ПАНЕЛЬ - скрывается при скролле к футеру
+      
+      // Mobile CTA bar hide on scroll to footer
       const mobileCta = document.getElementById('mobile-cta-bar');
       const footer = document.querySelector('footer');
       
@@ -2351,7 +2224,6 @@
           const footerRect = footer.getBoundingClientRect();
           const windowHeight = window.innerHeight;
           
-          // Если футер близко к низу экрана - скрываем панель
           if (footerRect.top < windowHeight - 100) {
             mobileCta.classList.add('hidden');
           } else {
@@ -2399,68 +2271,11 @@
       return true;
     }
 
-    // Gallery modal
-    let currentGalleryIndex = 0;
-    const galleryImages = [
-      { src: "images/fridge-repair.jpg", title: "Fridge Compressor Replacement" },
-      { src: "images/washer-repair.jpg", title: "Washer Drum Repair" },
-      { src: "images/oven-repair.jpg", title: "Oven Element Replacement" }
-    ];
-
-    function openGalleryModal(index) {
-      currentGalleryIndex = index;
-      const modal = document.getElementById('gallery-modal');
-      const img = document.getElementById('gallery-main-img');
-      
-      img.src = galleryImages[index].src;
-      img.alt = galleryImages[index].title;
-      modal.classList.add('is-open');
-      document.body.style.overflow = 'hidden';
-      
-      // Update active thumbnail
-      document.querySelectorAll('.gallery-thumbnails img').forEach((thumb, i) => {
-        thumb.style.borderColor = i === index ? 'var(--accent-green)' : 'transparent';
-      });
-    }
-
-    function closeGalleryModal() {
-      document.getElementById('gallery-modal').classList.remove('is-open');
-      document.body.style.overflow = '';
-    }
-
-    function changeGalleryImage(index) {
-      openGalleryModal(index);
-    }
-
-    // Promo popup
-    let promoClosed = localStorage.getItem('promoClosed') === 'true';
-    
-    function openPromo() {
-      if (!promoClosed && window.innerWidth > 768) {
-        document.getElementById('promo-modal').classList.add('is-open');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    function closePromo() {
-      promoClosed = true;
-      localStorage.setItem('promoClosed', 'true');
-      document.getElementById('promo-modal').classList.remove('is-open');
-      document.body.style.overflow = '';
-    }
-
-    // Open promo after 15 seconds
-    window.addEventListener('load', function() {
-      setTimeout(openPromo, 15000);
-    });
-
     // Close modals on ESC
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         closeModal();
         closeBookingModal();
-        closeGalleryModal();
-        closePromo();
       }
     });
   </script>
