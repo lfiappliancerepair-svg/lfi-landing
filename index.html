@@ -2,27 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>LFI Appliance Repair | Appliance Repair Coordination & Support Toronto & GTA</title>
+  <title>LFI Appliance Repair | Appliance Repair Coordination & Customer Support Toronto & GTA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="LFI Appliance Repair – connecting customers with independent appliance technicians across Toronto & GTA. Educational content and scheduling support." />
-  <meta name="keywords" content="appliance repair Toronto, appliance repair GTA, fridge repair Toronto, refrigerator repair GTA, washer repair Toronto, dryer repair Toronto, dishwasher repair Toronto, oven repair Toronto, stove repair Toronto, appliance service Etobicoke, appliance technician Toronto" />
+  <meta name="description" content="LFI Appliance Repair – coordinating connections between customers and licensed independent appliance technicians across Toronto & GTA. Educational content and scheduling support." />
+  <meta name="keywords" content="appliance repair coordination Toronto, appliance technician connection GTA, fridge repair coordination Toronto, refrigerator technician connection GTA, washer repair coordination Toronto" />
   <meta name="robots" content="index, follow" />
   <meta name="language" content="en" />
-  <meta name="author" content="LFI Appliance Repair · Servicing whole GTA" />
+  <meta name="author" content="LFI Appliance Repair · Coordination Services – GTA" />
   <link rel="canonical" href="https://lfirepair.ca/" />
 
   <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:title" content="LFI Appliance Repair – Appliance Repair Coordination Toronto & GTA" />
-  <meta property="og:description" content="Connecting customers with independent technicians for fridge, washer, dryer, dishwasher and oven repair across Toronto & GTA. Educational content and scheduling support." />
+  <meta property="og:description" content="Coordinating connections between customers and licensed independent technicians for fridge, washer, dryer, dishwasher and oven repair across Toronto & GTA. Educational content and scheduling support." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://lfirepair.ca/" />
   <meta property="og:image" content="https://lfirepair.ca/images/og-image.jpg" />
-  <meta property="og:site_name" content="LFI Appliance Repair" />
+  <meta property="og:site_name" content="LFI Appliance Repair Coordination" />
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="LFI Appliance Repair – Appliance Repair Coordination Toronto & GTA" />
-  <meta name="twitter:description" content="Appliance repair coordination service in Toronto & GTA. We connect customers with qualified independent technicians." />
+  <meta name="twitter:description" content="Appliance repair coordination service in Toronto & GTA. We coordinate connections between customers and qualified independent technicians." />
   <meta name="twitter:image" content="https://lfirepair.ca/images/og-image.jpg" />
 
   <!-- GEO / Local signals -->
@@ -46,7 +46,7 @@
     "url": "https://lfirepair.ca/",
     "telephone": "+1-437-499-7971",
     "priceRange": "$$",
-    "description": "Appliance repair coordination and customer support service in Toronto and the Greater Toronto Area (GTA). We connect customers with independent licensed technicians.",
+    "description": "Appliance repair coordination and customer support service in Toronto and the Greater Toronto Area (GTA). We coordinate connections between customers and independent licensed technicians.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Toronto",
@@ -58,7 +58,7 @@
     "areaServed": ["Toronto", "Etobicoke", "Mississauga", "Scarborough", "Brampton", "Vaughan"],
     "serviceType": [
       "Appliance repair coordination",
-      "Technician dispatch service",
+      "Technician connection service",
       "Customer support",
       "Scheduling services"
     ]
@@ -438,6 +438,14 @@
       box-shadow: 0 0 0 1px rgba(74, 235, 106, 0.7), 0 0 14px rgba(74, 235, 106, 0.55);
     }
 
+    .coordination-notice {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      text-align: center;
+      opacity: 0.8;
+    }
+
     section { padding: clamp(20px, 4vw, 40px) 0; }
 
     .section-title {
@@ -669,13 +677,24 @@
       100% { transform: translateX(calc(-100px * 12 - 50px * 11)); }
     }
 
-    /* НОВЫЙ РАЗДЕЛ ЦЕН - FIXED TABLE */
+    /* PRICING SECTION - FIXED TABLE */
     .pricing-section {
       background: rgba(31, 14, 33, 0.6);
       border-radius: var(--radius);
       border: 1px solid var(--border);
       padding: 40px;
       margin: 40px 0;
+    }
+
+    .reference-notice {
+      background: rgba(74, 235, 106, 0.1);
+      border: 1px solid rgba(74, 235, 106, 0.3);
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
     }
 
     .pricing-table {
@@ -717,7 +736,7 @@
       }
     }
 
-    /* НОВЫЙ РАЗДЕЛ FAQ */
+    /* FAQ SECTION */
     .faq-section {
       background: rgba(31, 14, 33, 0.6);
       border-radius: var(--radius);
@@ -822,6 +841,17 @@
     .gallery-title {
       font-weight: 600;
       color: white;
+    }
+
+    .educational-notice {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 20px;
+      text-align: center;
+      font-style: italic;
+      opacity: 0.8;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 15px;
     }
 
     /* Video Section */
@@ -1135,6 +1165,17 @@
       resize: vertical;
     }
 
+    .form-notice {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 12px;
+      margin: 15px 0;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+      border-left: 3px solid var(--accent-green);
+    }
+
     /* Promo Modal */
     .promo-modal {
       position: fixed;
@@ -1287,7 +1328,6 @@
     .footer-disclaimer {
       font-size: 11px;
       color: var(--text-muted);
-      opacity: 0.8;
       margin-top: 8px;
       line-height: 1.4;
     }
@@ -1354,7 +1394,7 @@
             <img src="images/og-image.jpg" alt="LFI Appliance Repair Logo" class="logo-img" loading="lazy">
             <div class="logo-text">
               <div class="logo-text-main">LFI Appliance Repair</div>
-              <div class="logo-text-sub">Coordination Services – GTA</div>
+              <div class="logo-text-sub">Coordination & Support – GTA</div>
             </div>
           </div>
           
@@ -1365,7 +1405,7 @@
             </div>
             <div class="nav-buttons">
               <button class="btn btn-booking" onclick="openBookingModal()">
-                📅 Check Availability
+                📅 Request Technician Connection
               </button>
               <a class="btn btn-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair%20coordination" target="_blank" rel="noopener noreferrer">
                 WhatsApp
@@ -1380,7 +1420,7 @@
                 Facebook
               </a>
               <button class="btn btn-ghost" type="button" onclick="openModal()">
-                Get Quote
+                Request Contractor Estimate
               </button>
             </div>
           </div>
@@ -1395,12 +1435,15 @@
           <div class="emergency-content">
             <div class="emergency-icon">🚨</div>
             <div class="emergency-text">
-              <h3>Emergency Same-Day Technician Connection</h3>
+              <h3>Check Same-Day Technician Availability</h3>
               <p>Water leaking? Fridge not cooling? We'll connect you with available contractors</p>
             </div>
             <a href="tel:+14374997971" class="btn btn-emergency">
               Call Now: +1 (437) 499-7971
             </a>
+          </div>
+          <div class="coordination-notice">
+            LFI provides coordination only. All repair work is performed by licensed independent contractors.
           </div>
         </div>
       </section>
@@ -1412,18 +1455,18 @@
             <div>
               <div class="badge glow-border">
                 <span>⚡</span>
-                Appliance repair coordination with technical expertise across the GTA
+                Appliance repair coordination & customer support across GTA
               </div>
               <h1 class="hero-title">Appliance repair coordination with technical expertise across the GTA</h1>
               <p class="hero-subtitle">
-                Connecting customers with independent technicians for fridges, washers, dryers, dishwashers, ovens and more. Educational content and booking support across Toronto & GTA.
+                We connect customers with licensed independent technicians for fridge, washer, dryer, dishwasher and oven repair coordination. Demonstration and educational content about appliance repair across Toronto & GTA.
               </p>
               
               <div class="hero-features">
                 <div class="feature-item">
                   <div class="feature-icon">✓</div>
                   <div class="feature-text">
-                    <strong>Same-day service connection</strong>
+                    <strong>Same-day technician connection</strong>
                     <span>Available in most areas through our network</span>
                   </div>
                 </div>
@@ -1437,15 +1480,15 @@
                 <div class="feature-item">
                   <div class="feature-icon">✓</div>
                   <div class="feature-text">
-                    <strong>Diagnostic fee</strong>
-                    <span>$99 (typically waived with repair)</span>
+                    <strong>Diagnostic coordination</strong>
+                    <span>$99 (typically waived with repair by contractor)</span>
                   </div>
                 </div>
               </div>
 
               <div class="cta-row">
                 <button class="btn btn-booking" onclick="openBookingModal()">
-                  📅 Check Technician Availability
+                  📅 Request Technician Connection
                 </button>
                 <a class="btn btn-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair%20coordination" target="_blank" rel="noopener noreferrer">
                   Message on WhatsApp
@@ -1456,14 +1499,17 @@
               </div>
 
               <div class="service-call-pill">
-                Diagnostic visit — <span>$99</span> (typically waived with repair)
+                Diagnostic coordination — <span>$99</span> (typically waived with repair by contractor)
+              </div>
+              <div class="coordination-notice">
+                LFI provides coordination only. All repair work is performed by licensed independent contractors.
               </div>
             </div>
 
             <div>
               <!-- Cost Estimator Card -->
               <div class="estimator-card">
-                <h3 style="margin-bottom: 15px; color: var(--text-secondary);">Quick Estimate</h3>
+                <h3 style="margin-bottom: 15px; color: var(--text-secondary);">Quick Reference Estimate</h3>
                 <div class="estimator-step">
                   <label>Appliance Type:</label>
                   <select id="appliance-type" onchange="updateEstimate()">
@@ -1476,8 +1522,8 @@
                   </select>
                 </div>
                 <div class="estimate-result">
-                  <div class="estimate-range">Estimated: <span id="cost-range">$150 - $300</span></div>
-                  <div class="estimate-note">*Final price after diagnostics by contractor</div>
+                  <div class="estimate-range">Reference: <span id="cost-range">$150 - $300</span></div>
+                  <div class="estimate-note">*Final pricing determined by contractor after diagnostics</div>
                 </div>
               </div>
             </div>
@@ -1489,10 +1535,14 @@
       <section id="pricing">
         <div class="container">
           <div class="pricing-section">
-            <h2 class="section-title">Typical Contractor Rates</h2>
+            <h2 class="section-title">Reference Contractor Rates (for customer awareness)</h2>
             <p class="section-muted">
-              Transparent pricing. Here are average rates for common repairs through our network:
+              Transparent pricing reference. Here are typical rates for common repairs by independent contractors.
             </p>
+
+            <div class="reference-notice">
+              <strong>Important:</strong> These prices are provided for reference only. All repair work is performed by independent licensed contractors. Final pricing is determined directly by the contractor after diagnostics.
+            </div>
 
             <table class="pricing-table">
               <thead>
@@ -1533,7 +1583,7 @@
 
             <div style="text-align: center; margin-top: 20px;">
               <div class="service-call-pill">
-                💰 Diagnostic Fee: $99 (typically waived if you proceed with repair)
+                💰 Diagnostic Fee: $99 (typically waived if you proceed with repair by contractor)
               </div>
             </div>
           </div>
@@ -1545,8 +1595,56 @@
         <div class="container">
           <h2 class="section-title">Appliance Repair Coordination</h2>
           <p class="section-muted">
-            We coordinate repairs for most common household appliances through our network of independent technicians.
+            LFI helps customers connect with licensed independent technicians experienced in servicing:
           </p>
+          
+          <div style="background: rgba(255,255,255,0.05); border-radius: var(--radius); padding: 20px; margin-bottom: 30px;">
+            <ul style="columns: 2; list-style: none; color: var(--text-secondary);">
+              <li style="margin-bottom: 8px;">• Refrigerators</li>
+              <li style="margin-bottom: 8px;">• Washers</li>
+              <li style="margin-bottom: 8px;">• Dryers</li>
+              <li style="margin-bottom: 8px;">• Dishwashers</li>
+              <li style="margin-bottom: 8px;">• Ovens & stoves</li>
+              <li style="margin-bottom: 8px;">• Microwaves</li>
+              <li style="margin-bottom: 8px;">• Range hoods</li>
+              <li style="margin-bottom: 8px;">• And more</li>
+            </ul>
+            <div style="margin-top: 15px; padding: 15px; background: rgba(74,235,106,0.1); border-radius: 8px; font-size: 13px; color: var(--text-muted);">
+              <strong>Important:</strong> LFI itself does not perform repair work. We coordinate, support scheduling, and provide educational content. All repair work is performed by licensed independent contractors.
+            </div>
+          </div>
+
+          <div class="grid grid-2" style="margin-top: 30px;">
+            <div class="card glow-border">
+              <div class="card-tag">LFI's Role</div>
+              <div class="card-title">Coordination & Support Services</div>
+              <p class="card-text">
+                • Customer support & communication<br>
+                • Scheduling & appointment coordination<br>
+                • Job coordination between customers and technicians<br>
+                • Educational content and demonstrations<br>
+                • Quality assurance follow-up
+              </p>
+            </div>
+            <div class="card glow-border">
+              <div class="card-tag">Contractor Services</div>
+              <div class="card-title">Typical Services by Independent Contractors</div>
+              <p class="card-text">
+                • Professional diagnostics<br>
+                • Appliance repairs<br>
+                • Parts installation<br>
+                • Maintenance services<br>
+                • Warranty service<br>
+                • Technical recommendations
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT WE COORDINATE SECTION -->
+      <section id="coordination">
+        <div class="container">
           <div class="grid grid-3">
             <div class="card card-fridge" itemscope itemtype="https://schema.org/Service">
               <meta itemprop="serviceType" content="Refrigerator Repair Coordination">
@@ -1555,7 +1653,7 @@
               <div class="card-body">
                 <div class="card-title" itemprop="name">Refrigerators & Freezers</div>
                 <p class="card-text" itemprop="description">
-                  Not cooling, icing up, water leaks, strange noises – our technicians provide professional diagnostics and repair services.
+                  We coordinate connections with technicians for not cooling, icing up, water leaks, strange noises issues.
                 </p>
               </div>
             </div>
@@ -1566,7 +1664,7 @@
               <div class="card-body">
                 <div class="card-title" itemprop="name">Washers & Dryers</div>
                 <p class="card-text" itemprop="description">
-                  Not spinning, not draining, noisy operation, no heat, error codes – reliable solutions from our network technicians.
+                  Coordination for not spinning, not draining, noisy operation, no heat, error codes with qualified technicians.
                 </p>
               </div>
             </div>
@@ -1577,7 +1675,7 @@
               <div class="card-body">
                 <div class="card-title" itemprop="name">Dishwashers</div>
                 <p class="card-text" itemprop="description">
-                  Poor cleaning, water left in tub, leaks, strange noises – root cause analysis by qualified technicians.
+                  Poor cleaning, water left in tub, leaks, strange noises – we connect you with experienced technicians.
                 </p>
               </div>
             </div>
@@ -1588,7 +1686,7 @@
               <div class="card-body">
                 <div class="card-title" itemprop="name">Ovens & Stoves</div>
                 <p class="card-text" itemprop="description">
-                  No heat, uneven baking, burners not working – electric ranges and built-in ovens serviced by our contractors.
+                  No heat, uneven baking, burners not working – coordination with qualified contractors.
                 </p>
               </div>
             </div>
@@ -1599,7 +1697,7 @@
               <div class="card-body">
                 <div class="card-title" itemprop="name">Microwaves & Hoods</div>
                 <p class="card-text" itemprop="description">
-                  Light on but not heating, fan issues, control problems – worth assessment by our technicians.
+                  Light on but not heating, fan issues, control problems – technician connection service.
                 </p>
               </div>
             </div>
@@ -1619,8 +1717,8 @@
           <!-- Brands Carousel -->
           <div class="brands-section">
             <div class="brands-header">
-              <div class="brands-title">Trusted Brands We Service</div>
-              <div class="brands-subtitle">Professional repair coordination for all major appliance brands</div>
+              <div class="brands-title">Trusted Brands in Our Network</div>
+              <div class="brands-subtitle">Our network includes technicians experienced with all major appliance brands</div>
             </div>
             <div class="brands-scroll-container">
               <div class="brands-scroll-track">
@@ -1689,16 +1787,16 @@
             <div class="grid grid-2">
               <div class="card glow-border">
                 <div class="card-tag">Technical coordination</div>
-                <div class="card-title">Engineer-level diagnostic support</div>
+                <div class="card-title">Engineer-level diagnostic coordination</div>
                 <p class="card-text">
-                  Our network technicians approach appliances as complete systems, not just individual parts. This means fewer "let's try replacing this" guesses and more precise repair decisions.
+                  Our network technicians approach appliances as complete systems, not just individual parts. We coordinate connections with technicians who provide precise repair decisions.
                 </p>
               </div>
               <div class="card glow-border">
                 <div class="card-tag">Transparency</div>
                 <div class="card-title">Honest contractor recommendations</div>
                 <p class="card-text">
-                  If a repair is not worth it, our technicians will say so. You get clear explanations in simple language, not technical jargon.
+                  If a repair is not worth it, contractors in our network will say so. We ensure clear communication between customers and technicians.
                 </p>
               </div>
               <div class="card glow-border">
@@ -1712,7 +1810,7 @@
                 <div class="card-tag">Warranty</div>
                 <div class="card-title">Contractors stand behind their work</div>
                 <p class="card-text">
-                  Repairs through our network come with warranty on the work performed. Details depend on the type of repair and parts used by the contractor.
+                  Repairs through our coordinated network come with warranty on the work performed. Details depend on the type of repair and parts used by the contractor.
                 </p>
               </div>
             </div>
@@ -1731,17 +1829,17 @@
 
             <div class="faq-item">
               <div class="faq-question" onclick="toggleFAQ(this)">
-                How much does diagnostic service cost?
+                How much does diagnostic coordination cost?
                 <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
-                Technicians in our network typically charge $99 for diagnostic visits. This fee is usually waived if you proceed with the repair through our coordination service.
+                Contractors in our network typically charge $99 for diagnostic visits. This fee is usually waived if you proceed with the repair through our coordination service.
               </div>
             </div>
 
             <div class="faq-item">
               <div class="faq-question" onclick="toggleFAQ(this)">
-                Do you offer same-day service?
+                Do you offer same-day technician connection?
                 <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
@@ -1751,7 +1849,7 @@
 
             <div class="faq-item">
               <div class="faq-question" onclick="toggleFAQ(this)">
-                What's included in your warranty?
+                What's included in contractor warranty?
                 <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
@@ -1765,13 +1863,13 @@
                 <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
-                No, our technicians source all genuine parts for you. They have relationships with suppliers to get quality parts at better prices, and warranty them as part of their service.
+                No, contractors in our network source all genuine parts for you. They have relationships with suppliers to get quality parts at better prices, and warranty them as part of their service.
               </div>
             </div>
 
             <div class="faq-item">
               <div class="faq-question" onclick="toggleFAQ(this)">
-                What areas do you serve?
+                What areas do you coordinate services in?
                 <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
@@ -1781,11 +1879,11 @@
 
             <div class="faq-item">
               <div class="faq-question" onclick="toggleFAQ(this)">
-                How long do most repairs take?
+                How long do most contractor repairs take?
                 <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
-                Most common repairs are completed in 1-2 hours by our network technicians. Complex issues might require ordering specific parts, but contractors provide clear timelines during diagnostics.
+                Most common repairs are completed in 1-2 hours by contractors in our network. Complex issues might require ordering specific parts, but contractors provide clear timelines during diagnostics.
               </div>
             </div>
           </div>
@@ -1822,6 +1920,10 @@
                 <div class="gallery-title">Oven Repair Demo</div>
               </div>
             </div>
+          </div>
+          
+          <div class="educational-notice">
+            All videos and photos on this website are demonstrations or educational examples. The person shown performing work is not providing repair services on behalf of LFI. All actual repair work for LFI customers is performed exclusively by independent licensed contractors.
           </div>
         </div>
       </section>
@@ -1870,11 +1972,15 @@
                 </div>
               </div>
             </div>
+            
+            <div class="educational-notice">
+              All videos and photos on this website are demonstrations or educational examples. The person shown performing work is not providing repair services on behalf of LFI. All actual repair work for LFI customers is performed exclusively by independent licensed contractors.
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- SERVICE AREAS - ВОССТАНОВЛЕНЫ КАРТИНКИ -->
+      <!-- SERVICE AREAS -->
       <section id="service-areas">
         <div class="container">
           <h2 class="section-title">Service Areas</h2>
@@ -2023,7 +2129,7 @@
 
             <div class="cta-row">
               <button class="btn btn-booking" onclick="openBookingModal()">
-                📅 Check Technician Availability
+                📅 Request Technician Connection
               </button>
               <a class="btn btn-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair%20coordination" target="_blank" rel="noopener noreferrer">
                 WhatsApp Us
@@ -2041,7 +2147,7 @@
     <div class="mobile-cta-bar" id="mobile-cta-bar">
       <a href="tel:+14374997971" class="btn btn-outline">📞 Call</a>
       <a href="https://wa.me/14374997971" class="btn btn-primary">💬 WhatsApp</a>
-      <button class="btn btn-booking" onclick="openBookingModal()">📅 Check</button>
+      <button class="btn btn-booking" onclick="openBookingModal()">📅 Request</button>
     </div>
 
     <footer>
@@ -2050,7 +2156,10 @@
           <div class="footer-info">
             © <span id="year"></span> LFI Appliance Repair Coordination & Support · All rights reserved.
             <div class="footer-disclaimer" style="margin-bottom: 15px; border: 1px solid rgba(255,255,255,0.2); padding: 15px; border-radius: 8px;">
-              <strong>Legal Disclaimer:</strong> All work content shown on this website is for educational and demonstration purposes only. LFI Appliance Repair manages scheduling and customer support. Repair work is performed exclusively by licensed independent contractors.
+              <strong>Legal Disclaimer:</strong> LFI Appliance Repair provides coordination, customer support, scheduling, and educational content only.<br><br>
+              All appliance repair work for LFI customers is performed exclusively by licensed independent contractors. LFI does not provide repair services and is not a contractor.<br><br>
+              All videos and photos on this website represent demonstration or educational content showing typical repair procedures.<br><br>
+              By contacting LFI you agree that LFI may connect you with an independent technician.
             </div>
             <div class="footer-disclaimer">
               Information on this site is for general guidance. Final diagnostics and repair costs are confirmed by contractors.<br>
@@ -2079,7 +2188,7 @@
     <div class="modal-backdrop" onclick="closeModal()"></div>
     <div class="modal-dialog">
       <button class="modal-close" type="button" onclick="closeModal()" aria-label="Close">×</button>
-      <div class="modal-title">Get a Quote</div>
+      <div class="modal-title">Request Contractor Estimate</div>
       <div class="modal-sub">
         Tell us about your appliance issue for a quick estimate from our network.
       </div>
@@ -2103,7 +2212,11 @@
           </div>
         </div>
 
-        <button class="btn btn-primary" type="submit">Get Quote from Contractors</button>
+        <div class="form-notice">
+          Submitting this form allows LFI to connect you with an independent licensed technician. LFI does not perform repair work.
+        </div>
+
+        <button class="btn btn-primary" type="submit">Request Contractor Estimate</button>
       </form>
     </div>
   </div>
@@ -2163,6 +2276,10 @@
             <div class="field-label">Issue Description</div>
             <textarea class="textarea" name="issue" placeholder="Describe the problem..."></textarea>
           </div>
+        </div>
+
+        <div class="form-notice">
+          Submitting this form allows LFI to connect you with an independent licensed technician. LFI does not perform repair work.
         </div>
 
         <div style="background: rgba(74, 235, 106, 0.1); padding: 12px; border-radius: 8px; margin: 10px 0; font-size: 12px;">
