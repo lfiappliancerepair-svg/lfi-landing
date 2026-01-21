@@ -1,0 +1,2443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LFI Appliance Repair | Appliance Service Coordination & Customer Support (GTA)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="LFI Appliance Repair provides appliance service coordination, scheduling support, and customer communication across the Greater Toronto Area. Repairs are performed by independent third-party technicians." />
+  <meta name="keywords" content="appliance service coordination GTA, appliance repair coordination Toronto, scheduling support, independent technicians" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="en" />
+  <meta name="author" content="LFI Appliance Repair · Coordination Services – GTA" />
+  <link rel="canonical" href="https://lfirepair.ca/" />
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:title" content="LFI Appliance Repair – Appliance Service Coordination (GTA)" />
+  <meta property="og:description" content="Service coordination, scheduling support, and customer communication across the Greater Toronto Area. Repairs are performed by independent third-party technicians." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lfirepair.ca/" />
+  <meta property="og:image" content="https://lfirepair.ca/images/og-image.jpg" />
+  <meta property="og:site_name" content="LFI Appliance Repair Coordination" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LFI Appliance Repair – Appliance Service Coordination (GTA)" />
+  <meta name="twitter:description" content="Service coordination, scheduling support, and customer communication across the Greater Toronto Area. Repairs are performed by independent third-party technicians." />
+  <meta name="twitter:image" content="https://lfirepair.ca/images/og-image.jpg" />
+
+  <!-- GEO / Local signals -->
+  <meta name="geo.region" content="CA-ON" />
+  <meta name="geo.placename" content="Toronto" />
+  <meta name="geo.position" content="43.6532;-79.3832" />
+  <meta name="ICBM" content="43.6532, -79.3832" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/icons/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+
+  <!-- LocalBusiness structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "LFI Appliance Repair",
+    "image": "https://lfirepair.ca/images/og-image.jpg",
+    "url": "https://lfirepair.ca/",
+    "telephone": "+1-437-499-7971",
+    "priceRange": "$$",
+    "description": "Appliance repair coordination and customer support service in Toronto and the Greater Toronto Area (GTA). We coordinate connections between customers and independent third-party technicians.",
+    "areaServed": ["Toronto", "Etobicoke", "Mississauga", "Scarborough", "Brampton", "Vaughan"],
+    "serviceType": [
+      "Appliance repair coordination",
+      "Technician connection service",
+      "Customer support",
+      "Scheduling services"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #1a0b1c;
+      --bg-light: #2a152b;
+      --bg-deep: #110814;
+      --text-primary: #FFFFFF;
+      --text-secondary: #E8DCF9;
+      --text-muted: #B4A6D1;
+      --accent: #BA8CFF;
+      --accent-green: #4AEB6A;
+      --accent-orange: #FF8A4C;
+      --ink: #0F0611;
+      --card: #1f0e21;
+      --border: #3D2A45;
+      --radius: 16px;
+      --shadow: 0 20px 40px rgba(0, 0, 0, 0.65);
+      --max-width: 1200px;
+      --container-padding: 20px;
+    }
+
+    html { 
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    * { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(ellipse at top, #2a152b, #1a0b1c 60%, #110814 100%);
+      color: var(--text-primary);
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: var(--accent);
+      color: var(--ink);
+      padding: 12px 16px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      z-index: 1000;
+      transition: top 0.3s ease;
+    }
+    .skip-link:focus { top: 6px; }
+
+    body::before,
+    body::after {
+      display: none;
+    }
+
+    @media (max-width: 640px) {
+      :root { --container-padding: 16px; --radius: 12px; }
+    }
+
+    .page { min-height: 100vh; display: flex; flex-direction: column; }
+
+    header {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(26, 11, 28, 0.95), transparent);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--container-padding);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      flex-shrink: 0;
+    }
+    .logo-img {
+      width: clamp(80px, 10vw, 120px);
+      height: clamp(80px, 10vw, 120px);
+      border-radius: 14px;
+      object-fit: cover;
+      background: linear-gradient(135deg, #4AEB6A, #BA8CFF);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .logo-text-main {
+      font-weight: 800;
+      font-size: clamp(16px, 2.5vw, 21px);
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+    .logo-text-sub {
+      font-size: clamp(10px, 1.5vw, 12px);
+      color: var(--text-muted);
+    }
+
+    .nav-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+      font-size: 13px;
+      flex: 1;
+    }
+
+    @media (min-width: 640px) {
+      .nav-cta {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+      }
+    }
+
+    .nav-contacts {
+      display: none;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+      font-size: clamp(14px, 1.8vw, 20px);
+      color: var(--text-muted);
+    }
+
+    @media (min-width: 768px) {
+      .nav-contacts { display: flex; }
+    }
+
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(6px, 2vw, 8px) clamp(10px, 2vw, 14px);
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: clamp(11px, 1.5vw, 13px);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: #E8E8E8;
+      color: var(--ink);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.6);
+      background: #FFFFFF;
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(191, 191, 191, 0.7);
+      background: rgba(24, 10, 25, 0.7);
+      color: var(--text-secondary);
+    }
+    .btn-outline:hover {
+      background: rgba(24, 10, 25, 0.95);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      border: 1px dashed rgba(191, 191, 191, 0.5);
+      background: transparent;
+      color: var(--text-muted);
+    }
+    .btn-ghost:hover {
+      background: rgba(24, 10, 25, 0.7);
+      transform: translateY(-1px);
+    }
+
+    .btn-nav-ghost {
+      border: 1px solid rgba(191, 191, 191, 0.3);
+      background: rgba(24, 10, 25, 0.6);
+      color: var(--text-muted);
+    }
+    .btn-nav-ghost:hover {
+      background: rgba(24, 10, 25, 0.9);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+
+    .btn-booking {
+      background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+      color: white;
+      box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+      font-weight: 700;
+      padding: 10px 20px;
+    }
+    .btn-booking:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(255, 107, 107, 0.6);
+      background: linear-gradient(135deg, #FF8E8E, #FF6B6B);
+    }
+
+    main { flex: 1; padding: 20px 0; }
+
+    .glow-border {
+      box-shadow: 0 0 0 1px rgba(92, 255, 122, 0.5), 0 0 12px rgba(92, 255, 122, 0.45);
+      border-color: rgba(92, 255, 122, 0.75) !important;
+    }
+
+    /* Emergency Banner */
+    .emergency-banner {
+      background: linear-gradient(135deg, rgba(74, 235, 106, 0.15), rgba(186, 140, 255, 0.1));
+      border: 1px solid rgba(74, 235, 106, 0.4);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin: 20px 0;
+      backdrop-filter: blur(10px);
+    }
+
+    .emergency-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .emergency-icon { font-size: 24px; }
+
+    .emergency-text { flex: 1; }
+    .emergency-text h3 { 
+      font-size: 18px; 
+      margin-bottom: 4px;
+      color: var(--accent-green);
+    }
+
+    .btn-emergency {
+      background: var(--accent-green);
+      color: var(--ink);
+      font-weight: 700;
+      padding: 10px 20px;
+      box-shadow: 0 8px 20px rgba(74, 235, 106, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .emergency-content { flex-direction: column; text-align: center; }
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      padding: clamp(30px, 5vw, 60px) 0 clamp(20px, 4vw, 40px);
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: clamp(20px, 4vw, 40px);
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .hero-grid { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: clamp(4px, 1.5vw, 6px) clamp(12px, 2vw, 16px);
+      border-radius: 999px;
+      font-size: clamp(11px, 1.5vw, 13px);
+      background: radial-gradient(circle at top left, rgba(255,255,255,0.15), rgba(26, 11, 28, 0.95));
+      border: 1px solid rgba(191, 191, 191, 0.6);
+      color: var(--text-secondary);
+      margin-bottom: clamp(12px, 3vw, 18px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.7);
+    }
+
+    .hero-title {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: clamp(8px, 2vw, 16px);
+      line-height: 1.1;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--text-secondary);
+      margin-bottom: clamp(12px, 3vw, 20px);
+      line-height: 1.4;
+    }
+
+    .hero-features {
+      display: grid;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .feature-icon { 
+      font-size: 20px; 
+      color: var(--accent-green);
+    }
+    .feature-text { flex: 1; }
+    .feature-text strong { display: block; color: var(--text-primary); }
+    .feature-text span { font-size: 14px; color: var(--text-muted); }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: clamp(8px, 2vw, 12px);
+      margin: 20px 0;
+    }
+
+    @media (max-width: 480px) {
+      .cta-row { flex-direction: column; }
+      .cta-row .btn { width: 100%; max-width: 280px; }
+    }
+
+    .service-call-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: clamp(4px, 1.5vw, 6px) clamp(10px, 2vw, 14px);
+      border-radius: 999px;
+      border: 1px solid rgba(74, 235, 106, 0.7);
+      font-size: clamp(11px, 1.5vw, 13px);
+      color: var(--text-secondary);
+      background: rgba(6, 40, 20, 0.9);
+      box-shadow: 0 0 0 1px rgba(74, 235, 106, 0.7), 0 0 14px rgba(74, 235, 106, 0.55);
+    }
+
+    .coordination-notice {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      text-align: center;
+      opacity: 0.8;
+    }
+
+    section { padding: clamp(20px, 4vw, 40px) 0; }
+
+    .section-title {
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 700;
+      margin-bottom: clamp(10px, 2vw, 16px);
+      line-height: 1.2;
+    }
+
+    .section-muted {
+      font-size: clamp(13px, 1.5vw, 15px);
+      color: var(--text-secondary);
+      margin-bottom: clamp(14px, 3vw, 20px);
+    }
+
+    /* Grid system */
+    .grid { display: grid; gap: clamp(10px, 2vw, 16px); }
+
+    @media (min-width: 1024px) {
+      .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 767px) {
+      .grid-3, .grid-2 { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: rgba(31, 14, 33, 0.9);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: clamp(12px, 2vw, 16px);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      min-height: 180px;
+    }
+
+    .card:hover { 
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-title {
+      font-size: clamp(14px, 1.8vw, 16px);
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-secondary);
+    }
+
+    .card-text {
+      font-size: clamp(12px, 1.5vw, 14px);
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .card-tag {
+      font-size: clamp(10px, 1.2vw, 11px);
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* Services cards - FIXED for missing images */
+    .card-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.28;
+      filter: saturate(0.9);
+      z-index: 0;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover .card-bg { transform: scale(1.05); }
+
+    .card-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(0,0,0,0.35), rgba(17,2,26,0.95));
+      z-index: 1;
+    }
+
+    .card-body { position: relative; z-index: 2; }
+
+    /* Fallback for missing background images */
+    .card-fridge .card-bg { 
+      background: linear-gradient(135deg, rgba(0,100,155,0.7), rgba(0,120,200,0.7)) url("images/fridge-repairrr.jpg");
+      background-size: cover;
+    }
+    .card-washer .card-bg { 
+      background: linear-gradient(135deg, rgba(158,11,15,0.7), rgba(200,16,46,0.7)) url("images/washer-repairrr.jpg");
+      background-size: cover;
+    }
+    .card-dishwasher .card-bg { 
+      background: linear-gradient(135deg, rgba(255,218,0,0.7), rgba(255,231,76,0.7)) url("images/dishwasher-repair.jpg");
+      background-size: cover;
+    }
+    .card-oven .card-bg { 
+      background: linear-gradient(135deg, rgba(165,0,52,0.7), rgba(206,15,61,0.7)) url("images/oven-repairrr.jpg");
+      background-size: cover;
+    }
+    .card-micro .card-bg { 
+      background: linear-gradient(135deg, rgba(10,100,160,0.7), rgba(6,128,198,0.7)) url("images/microwave-hood.jpg");
+      background-size: cover;
+    }
+    .card-other .card-bg { 
+      background: linear-gradient(135deg, rgba(74,235,106,0.7), rgba(71,211,103,0.7)) url("images/other-appliance.jpg");
+      background-size: cover;
+    }
+
+    /* Why LFI Section */
+    .why-section {
+      background: rgba(31, 14, 33, 0.6);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 40px;
+      margin: 40px 0;
+    }
+
+    /* New Brands Carousel with Real Icons */
+    .brands-section {
+      background: rgba(31, 14, 33, 0.7);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 40px 20px;
+      margin: 40px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brands-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
+    }
+
+    .brands-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .brands-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .brands-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .brands-scroll-container {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .brands-scroll-track {
+      display: flex;
+      animation: scrollBrands 40s linear infinite;
+      gap: 50px;
+    }
+
+    .brands-scroll-track:hover {
+      animation-play-state: paused;
+    }
+
+    .brand-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      min-width: 100px;
+      transition: all 0.3s ease;
+    }
+
+    .brand-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .brand-icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      font-weight: bold;
+      color: var(--text-primary);
+    }
+
+    /* Brand-specific colors */
+    .brand-whirlpool { background: linear-gradient(135deg, #652C90, #8B3DB8); }
+    .brand-maytag { background: linear-gradient(135deg, #005596, #0078C8); }
+    .brand-kitchenaid { background: linear-gradient(135deg, #9E0B0F, #C8102E); }
+    .brand-frigidaire { background: linear-gradient(135deg, #00539B, #0078C8); }
+    .brand-ge { background: linear-gradient(135deg, #0A64A0, #0680C6); }
+    .brand-samsung { background: linear-gradient(135deg, #1428A0, #1C4FD9); }
+    .brand-lg { background: linear-gradient(135deg, #A50034, #CE0F3D); }
+    .brand-bosch { background: linear-gradient(135deg, #EA0011, #FF0015); }
+    .brand-electrolux { background: linear-gradient(135deg, #FFDA00, #FFE74C); color: #000; }
+    .brand-amana { background: linear-gradient(135deg, #005596, #0078C8); }
+    .brand-jennair { background: linear-gradient(135deg, #1A1A1A, #333333); }
+    .brand-more { background: linear-gradient(135deg, #4AEB6A, #47D367); color: #000; }
+
+    .brand-name {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-align: center;
+      font-weight: 500;
+    }
+
+    @keyframes scrollBrands {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-100px * 12 - 50px * 11)); }
+    }
+
+    /* PRICING SECTION - FIXED TABLE */
+    .pricing-section {
+      background: rgba(31, 14, 33, 0.6);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 40px;
+      margin: 40px 0;
+    }
+
+    .reference-notice {
+      background: rgba(74, 235, 106, 0.1);
+      border: 1px solid rgba(74, 235, 106, 0.3);
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      table-layout: fixed;
+    }
+
+    .pricing-table th {
+      background: rgba(74, 235, 106, 0.1);
+      color: var(--accent-green);
+      padding: 15px;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid var(--accent-green);
+    }
+
+    .pricing-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+
+    .pricing-table tr:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .price-amount {
+      color: var(--accent-green);
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .pricing-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+
+    /* FAQ SECTION */
+    .faq-section {
+      background: rgba(31, 14, 33, 0.6);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 40px;
+      margin: 40px 0;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      color: var(--text-muted);
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 20px;
+      max-height: 500px;
+    }
+
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    /* Gallery Styles */
+    .gallery-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .gallery-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      height: 200px;
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid var(--border);
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius);
+      transition: transform 0.3s ease;
+      background: linear-gradient(135deg, #4AEB6A, #BA8CFF);
+    }
+
+    .gallery-card:hover .gallery-img {
+      transform: scale(1.05);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: var(--radius);
+    }
+
+    .gallery-card:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .gallery-title {
+      font-weight: 600;
+      color: white;
+    }
+
+    .educational-notice {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 20px;
+      text-align: center;
+      font-style: italic;
+      opacity: 0.8;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 15px;
+    }
+
+    /* Video Section */
+    .video-section {
+      margin: 40px 0;
+    }
+
+    .videos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .video-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Areas Carousel - FIXED with images */
+    .areas-carousel-section {
+      margin: 40px 0;
+    }
+
+    .areas-carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+    }
+
+    .areas-track {
+      display: flex;
+      transition: transform 0.3s ease;
+    }
+
+    .area-slide {
+      display: flex;
+      gap: 20px;
+      min-width: 100%;
+      padding: 10px;
+    }
+
+    .area-card {
+      flex: 1;
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.3s ease;
+      min-height: 200px;
+    }
+
+    .area-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .area-card-image {
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+      background-color: var(--bg-light);
+    }
+
+    .area-card-content {
+      padding: 15px;
+    }
+
+    .area-card-name {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .area-card-region {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 5px;
+    }
+
+    .areas-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none;
+      padding: 0 10px;
+    }
+
+    .areas-arrow {
+      background: rgba(0, 0, 0, 0.7);
+      border: none;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      pointer-events: all;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .areas-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .areas-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--text-muted);
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .areas-dot.active {
+      background: var(--accent-green);
+    }
+
+    /* Smart Form */
+    .smart-form {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .form-quick-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .quick-option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .quick-option:hover {
+      border-color: var(--accent);
+      background: rgba(186, 140, 255, 0.1);
+    }
+
+    .quick-option span:first-child {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    /* Improved Mobile CTA Bar */
+    .mobile-cta-bar {
+      position: fixed;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(26, 11, 28, 0.95);
+      border: 1px solid rgba(74, 235, 106, 0.3);
+      border-radius: 50px;
+      display: none;
+      padding: 8px;
+      z-index: 90;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      max-width: 95%;
+      transition: transform 0.3s ease;
+    }
+
+    .mobile-cta-bar.hidden {
+      transform: translateX(-50%) translateY(100px);
+    }
+
+    .mobile-cta-bar .btn {
+      padding: 10px 14px;
+      font-size: 12px;
+      margin: 0 3px;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-cta-bar { display: flex; }
+      main { padding-bottom: 80px; }
+    }
+
+    /* Modal Styles */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal.is-open {
+      display: flex;
+    }
+
+    .modal-backdrop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+    }
+
+    .modal-dialog {
+      position: relative;
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 30px;
+      max-width: 500px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      z-index: 1001;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: var(--text-muted);
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+
+    .modal-sub {
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .field-label {
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    .input, .textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      font-size: 14px;
+      font-family: inherit;
+    }
+
+    .textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    .form-notice {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 12px;
+      margin: 15px 0;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+      border-left: 3px solid var(--accent-green);
+    }
+
+    /* Promo Modal */
+    .promo-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .promo-modal.is-open {
+      display: flex;
+    }
+
+    .promo-backdrop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .promo-dialog {
+      position: relative;
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 30px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      border: 2px solid var(--accent-green);
+      z-index: 1001;
+    }
+
+    .promo-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      color: var(--text-muted);
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .promo-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--accent-green);
+    }
+
+    .promo-text {
+      margin-bottom: 20px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Cost Estimator */
+    .estimator-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .estimator-step {
+      margin-bottom: 15px;
+    }
+
+    .estimator-step label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .estimator-step select {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      font-size: 14px;
+    }
+
+    .estimate-result {
+      text-align: center;
+      padding: 20px;
+      background: rgba(74, 235, 106, 0.1);
+      border-radius: var(--radius);
+      border: 1px solid rgba(74, 235, 106, 0.3);
+    }
+
+    .estimate-range {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent-green);
+      margin-bottom: 8px;
+    }
+
+    .estimate-note {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: clamp(20px, 3vw, 30px) 0;
+      font-size: clamp(11px, 1.5vw, 12px);
+      color: var(--text-muted);
+      margin-top: auto;
+      padding-bottom: 80px;
+      background: rgba(17, 8, 20, 0.8);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(12px, 2vw, 16px);
+      text-align: center;
+    }
+
+    @media (min-width: 640px) {
+      .footer-inner {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+
+    .footer-info {
+      flex: 1;
+      line-height: 1.6;
+    }
+
+    .footer-disclaimer {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+    }
+
+    @media (min-width: 640px) {
+      .social-links {
+        justify-content: flex-end;
+        margin-top: 0;
+      }
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      padding: clamp(4px, 1vw, 5px) clamp(8px, 1.5vw, 12px);
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: clamp(11px, 1.5vw, 12px);
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.12), rgba(17, 6, 24, 0.85));
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(12px);
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.2), rgba(17, 6, 24, 1));
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .social-icon { 
+      font-size: clamp(12px, 2vw, 14px); 
+    }
+
+    /* СЧЕТЧИК ПРОСМОТРОВ */
+    .view-counter {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <div class="page">
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <img src="images/og-image.jpg" alt="LFI Appliance Repair Logo" class="logo-img" loading="lazy">
+            <div class="logo-text">
+              <div class="logo-text-main">LFI Appliance Repair</div>
+              <div class="logo-text-sub">Coordination & Support – GTA</div>
+            </div>
+          </div>
+          
+          <div class="nav-cta">
+            <div class="nav-contacts">
+              <div>📞 +1 (437) 499-7971</div>
+              <div>✉️ lfisvc@gmail.com</div>
+            </div>
+            <div class="nav-buttons">
+              <button class="btn btn-booking" onclick="openBookingModal()">
+                📅 Request Technician Connection
+              </button>
+              <a class="btn btn-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair%20coordination" target="_blank" rel="noopener noreferrer">
+                WhatsApp
+              </a>
+              <a class="btn btn-outline" href="tel:+14374997971">
+                Call
+              </a>
+              <a class="btn btn-nav-ghost" href="https://instagram.com/lfiappliancerepair" target="_blank" rel="noopener noreferrer">
+                Instagram
+              </a>
+              <a class="btn btn-nav-ghost" href="https://www.facebook.com/profile.php?id=61571394611760" target="_blank" rel="noopener noreferrer">
+                Facebook
+              </a>
+              <button class="btn btn-ghost" type="button" onclick="openModal()">
+                Request Contractor Estimate
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Emergency Banner -->
+      <section class="emergency-banner">
+        <div class="container">
+          <div class="emergency-content">
+            <div class="emergency-icon">🚨</div>
+            <div class="emergency-text">
+              <h3>Check Technician Availability</h3>
+              <p>Water leaking? Fridge not cooling? We'll connect you with available contractors</p>
+            </div>
+            <a href="tel:+14374997971" class="btn btn-emergency">
+              Call Now: +1 (437) 499-7971
+            </a>
+          </div>
+          <div class="coordination-notice">
+            LFI provides service coordination only. All repair work is performed by independent third-party technicians. LFI does not perform repairs directly.
+          </div>
+        </div>
+      </section>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <div class="badge glow-border">
+                <span>⚡</span>
+                Appliance repair coordination & customer support across GTA
+              </div>
+              <h1 class="hero-title">Appliance repair coordination with technical expertise across the GTA</h1>
+              <p class="hero-subtitle">
+                We connect customers with independent third-party technicians for fridge, washer, dryer, dishwasher and oven repair coordination. Demonstration and educational content about appliance repair across Toronto & GTA.
+              </p>
+              
+              <div class="hero-features">
+                <div class="feature-item">
+                  <div class="feature-icon">✓</div>
+                  <div class="feature-text">
+                    <strong>Technician Scheduling</strong>
+                    <span>Availability varies by area and schedule</span>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">✓</div>
+                  <div class="feature-text">
+                    <strong>Service terms vary</strong>
+                    <span>Service terms are provided by the technician (may vary)</span>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">✓</div>
+                  <div class="feature-text">
+                    <strong>Diagnostic coordination</strong>
+                    <span>$99 (typically waived with repair by contractor)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cta-row">
+                <button class="btn btn-booking" onclick="openBookingModal()">
+                  📅 Request Technician Connection
+                </button>
+                <a class="btn btn-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair%20coordination" target="_blank" rel="noopener noreferrer">
+                  Message on WhatsApp
+                </a>
+                <a class="btn btn-outline" href="tel:+14374997971">
+                  Call Now
+                </a>
+              </div>
+
+              <div class="service-call-pill">
+                Service coordination — <span>details provided when scheduling</span>
+              </div>
+              <div class="coordination-notice">
+                LFI provides service coordination only. All repair work is performed by independent third-party technicians.
+              </div>
+            </div>
+
+            <div>
+              <!-- Cost Estimator Card -->
+              <div class="estimator-card">
+                <h3 style="margin-bottom: 15px; color: var(--text-secondary);">Quick Reference Estimate</h3>
+                <div class="estimator-step">
+                  <label>Appliance Type:</label>
+                  <select id="appliance-type" onchange="updateEstimate()">
+                    <option value="">Choose appliance...</option>
+                    <option value="fridge">Refrigerator</option>
+                    <option value="washer">Washer</option>
+                    <option value="dryer">Dryer</option>
+                    <option value="dishwasher">Dishwasher</option>
+                    <option value="oven">Oven/Stove</option>
+                  </select>
+                </div>
+                <div class="estimate-result">
+                  <div class="estimate-range">Reference: <span id="cost-range">Quoted by technician</span></div>
+                  <div class="estimate-note">*Final pricing determined by contractor after diagnostics</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING SECTION -->
+      <section id="pricing">
+        <div class="container">
+          <div class="pricing-section">
+            <h2 class="section-title">Typical Service Information (for customer awareness)</h2>
+            <p class="section-muted">
+              Service information. Here are typical rates for common repairs by independent contractors.
+            </p>
+
+            <div class="reference-notice">
+              <strong>Important:</strong> These prices are provided for reference only. All repair work is performed by independent independent contractors. Final pricing is determined directly by the contractor after diagnostics.
+            </div>
+
+            <table class="pricing-table">
+              <thead>
+                <tr>
+                  <th style="width: 30%">Service</th>
+                  <th style="width: 45%">Common Issues</th>
+                  <th style="width: 25%">Typical Contractor Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Refrigerator service coordination</td>
+                  <td>Not cooling, leaking water, ice buildup</td>
+                  <td class="price-amount">Quoted by technician</td>
+                </tr>
+                <tr>
+                  <td>Washer service coordination</td>
+                  <td>Not spinning, leaking, error codes</td>
+                  <td class="price-amount">Quoted by technician</td>
+                </tr>
+                <tr>
+                  <td>Dryer service coordination</td>
+                  <td>No heat, not tumbling, strange noises</td>
+                  <td class="price-amount">Quoted by technician</td>
+                </tr>
+                <tr>
+                  <td>Dishwasher service coordination</td>
+                  <td>Not cleaning, not draining, leaks</td>
+                  <td class="price-amount">Quoted by technician</td>
+                </tr>
+                <tr>
+                  <td>Oven/Stove Repair</td>
+                  <td>No heat, uneven baking, burner issues</td>
+                  <td class="price-amount">Quoted by technician</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div style="text-align: center; margin-top: 20px;">
+              <div class="service-call-pill">
+                💰 Diagnostic Fee: $99 (typically waived if you proceed with repair by contractor)
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES SECTION -->
+      <section id="services">
+        <div class="container">
+          <h2 class="section-title">Appliance Repair Coordination</h2>
+          <p class="section-muted">
+            LFI helps customers connect with independent third-party technicians experienced in servicing:
+          </p>
+          
+          <div style="background: rgba(255,255,255,0.05); border-radius: var(--radius); padding: 20px; margin-bottom: 30px;">
+            <ul style="columns: 2; list-style: none; color: var(--text-secondary);">
+              <li style="margin-bottom: 8px;">• Refrigerators</li>
+              <li style="margin-bottom: 8px;">• Washers</li>
+              <li style="margin-bottom: 8px;">• Dryers</li>
+              <li style="margin-bottom: 8px;">• Dishwashers</li>
+              <li style="margin-bottom: 8px;">• Ovens & stoves</li>
+              <li style="margin-bottom: 8px;">• Microwaves</li>
+              <li style="margin-bottom: 8px;">• Range hoods</li>
+              <li style="margin-bottom: 8px;">• And more</li>
+            </ul>
+            <div style="margin-top: 15px; padding: 15px; background: rgba(74,235,106,0.1); border-radius: 8px; font-size: 13px; color: var(--text-muted);">
+              <strong>Important:</strong> LFI itself does not perform repair work. We coordinate, support scheduling, and provide educational content. All repair work is performed by independent third-party contractors.
+            </div>
+          </div>
+
+          <div class="grid grid-2" style="margin-top: 30px;">
+            <div class="card glow-border">
+              <div class="card-tag">LFI's Role</div>
+              <div class="card-title">Coordination & Support Services</div>
+              <p class="card-text">
+                • Customer support & communication<br>
+                • Scheduling & appointment coordination<br>
+                • Job coordination between customers and technicians<br>
+                • Educational content and demonstrations<br>
+                • Quality assurance follow-up
+              </p>
+            </div>
+            <div class="card glow-border">
+              <div class="card-tag">Contractor Services</div>
+              <div class="card-title">Typical Services by Independent Contractors</div>
+              <p class="card-text">
+                • Professional diagnostics<br>
+                • Appliance repairs<br>
+                • Parts installation<br>
+                • Maintenance services<br>
+                • service terms service<br>
+                • Technical recommendations
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT WE COORDINATE SECTION -->
+      <section id="coordination">
+        <div class="container">
+          <div class="grid grid-3">
+            <div class="card card-fridge" itemscope itemtype="https://schema.org/Service">
+              <meta itemprop="serviceType" content="Refrigerator service coordination Coordination">
+              <div class="card-bg"></div>
+              <div class="card-overlay"></div>
+              <div class="card-body">
+                <div class="card-title" itemprop="name">Refrigerators & Freezers</div>
+                <p class="card-text" itemprop="description">
+                  We coordinate connections with technicians for not cooling, icing up, water leaks, strange noises issues.
+                </p>
+              </div>
+            </div>
+            <div class="card card-washer" itemscope itemtype="https://schema.org/Service">
+              <meta itemprop="serviceType" content="Washer service coordination Coordination">
+              <div class="card-bg"></div>
+              <div class="card-overlay"></div>
+              <div class="card-body">
+                <div class="card-title" itemprop="name">Washers & Dryers</div>
+                <p class="card-text" itemprop="description">
+                  Coordination for not spinning, not draining, noisy operation, no heat, error codes with qualified technicians.
+                </p>
+              </div>
+            </div>
+            <div class="card card-dishwasher" itemscope itemtype="https://schema.org/Service">
+              <meta itemprop="serviceType" content="Dishwasher service coordination Coordination">
+              <div class="card-bg"></div>
+              <div class="card-overlay"></div>
+              <div class="card-body">
+                <div class="card-title" itemprop="name">Dishwashers</div>
+                <p class="card-text" itemprop="description">
+                  Poor cleaning, water left in tub, leaks, strange noises – we connect you with experienced technicians.
+                </p>
+              </div>
+            </div>
+            <div class="card card-oven" itemscope itemtype="https://schema.org/Service">
+              <meta itemprop="serviceType" content="Oven Repair Coordination">
+              <div class="card-bg"></div>
+              <div class="card-overlay"></div>
+              <div class="card-body">
+                <div class="card-title" itemprop="name">Ovens & Stoves</div>
+                <p class="card-text" itemprop="description">
+                  No heat, uneven baking, burners not working – coordination with qualified contractors.
+                </p>
+              </div>
+            </div>
+            <div class="card card-micro" itemscope itemtype="https://schema.org/Service">
+              <meta itemprop="serviceType" content="Microwave Repair Coordination">
+              <div class="card-bg"></div>
+              <div class="card-overlay"></div>
+              <div class="card-body">
+                <div class="card-title" itemprop="name">Microwaves & Hoods</div>
+                <p class="card-text" itemprop="description">
+                  Light on but not heating, fan issues, control problems – technician connection service.
+                </p>
+              </div>
+            </div>
+            <div class="card card-other" itemscope itemtype="https://schema.org/Service">
+              <meta itemprop="serviceType" content="Appliance Repair Coordination">
+              <div class="card-bg"></div>
+              <div class="card-overlay"></div>
+              <div class="card-body">
+                <div class="card-title" itemprop="name">Other Appliances</div>
+                <p class="card-text" itemprop="description">
+                  Not sure if covered? Message us with model tag photo for quick confirmation of technician availability.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Brands Carousel -->
+          <div class="brands-section">
+            <div class="brands-header">
+              <div class="brands-title">Trusted Brands in Our Network</div>
+              <div class="brands-subtitle">Our network includes technicians experienced with all major appliance brands</div>
+            </div>
+            <div class="brands-scroll-container">
+              <div class="brands-scroll-track">
+                <div class="brand-item">
+                  <div class="brand-icon brand-whirlpool">W</div>
+                  <div class="brand-name">Whirlpool</div>
+                </div>
+                <div class="brand-item">
+                  <div class="brand-icon brand-maytag">M</div>
+                  <div class="brand-name">Maytag</div>
+                </div>
+                <div class="brand-item">
+                  <div class="brand-icon brand-kitchenaid">K</div>
+                  <div class="brand-name">KitchenAid</div>
+                </div>
+                <div class="brand-item">
+                  <div class="brand-icon brand-frigidaire">F</div>
+                  <div class="brand-name">Frigidaire</div>
+                </div>
+                <div class="brand-item">
+                  <div class="brand-icon brand-ge">GE</div>
+                  <div class="brand-name">General Electric</div>
+                </div>
+                <div class="brand-item">
+                  <div class="brand-icon brand-samsung">S</div>
+                  <div class="brand-name">Samsung</div>
+                </div>
+                <div class="brand-item">
+                  <div class="brand-icon brand-lg">LG</div>
+                  <div class="brand-name">LG</div>
+                </div>
+                <div class="brand-item">
+                  <div class="brand-icon brand-bosch">B</div>
+                  <div class="brand-name">Bosch</div>
+                </div>
+                <div class="brand-item">
+                  <div class="brand-icon brand-electrolux">E</div>
+                  <div class="brand-name">Electrolux</div>
+                </div>
+                <div class="brand-item">
+                  <div class="brand-icon brand-amana">A</div>
+                  <div class="brand-name">Amana</div>
+                </div>
+                <div class="brand-item">
+                  <div class="brand-icon brand-jennair">J</div>
+                  <div class="brand-name">JennAir</div>
+                </div>
+                <div class="brand-item">
+                  <div class="brand-icon brand-more">+</div>
+                  <div class="brand-name">And More</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY US SECTION -->
+      <section id="why-us">
+        <div class="container">
+          <div class="why-section">
+            <h2 class="section-title">Why Choose LFI Coordination</h2>
+            <p class="section-muted">
+              We provide transparent coordination between customers and qualified appliance technicians with technical expertise.
+            </p>
+            <div class="grid grid-2">
+              <div class="card glow-border">
+                <div class="card-tag">Technical coordination</div>
+                <div class="card-title">Engineer-level diagnostic coordination</div>
+                <p class="card-text">
+                  Our network technicians approach appliances as complete systems, not just individual parts. We coordinate connections with technicians who provide precise repair decisions.
+                </p>
+              </div>
+              <div class="card glow-border">
+                <div class="card-tag">Transparency</div>
+                <div class="card-title">Honest contractor recommendations</div>
+                <p class="card-text">
+                  If a repair is not worth it, contractors in our network will say so. We ensure clear communication between customers and technicians.
+                </p>
+              </div>
+              <div class="card glow-border">
+                <div class="card-tag">Coverage</div>
+                <div class="card-title">Toronto & GTA service coordination</div>
+                <p class="card-text">
+                  We coordinate services across Toronto and the Greater Toronto Area. If you're not sure whether we cover your area – just send a quick message.
+                </p>
+              </div>
+              <div class="card glow-border">
+                <div class="card-tag">service terms</div>
+                <div class="card-title">Contractors stand behind their work</div>
+                <p class="card-text">
+                  Repairs through our coordinated network come with service terms on the work performed. Details depend on the type of repair and parts used by the contractor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ SECTION -->
+      <section id="faq">
+        <div class="container">
+          <div class="faq-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-muted">
+              Quick answers to common questions about our appliance repair coordination services.
+            </p>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                How much does diagnostic coordination cost?
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                Contractors in our network typically charge $99 for diagnostic visits. This fee is usually waived if you proceed with the repair through our coordination service.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                How soon can a technician be scheduled?
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                Yes! We can often connect you with technicians offering  service for urgent repairs in most areas of Toronto and GTA. Contact us early in the day to check contractor availability.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                What's included in contractor service terms?
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                Contractors in our network provide service terms terms (if any) on both parts and labor for all repairs. If the same issue reoccurs within this period, they'll fix it at no additional cost.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                Do I need to buy parts myself?
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                Parts selection and sourcing are handled by the technician. LFI can help pass along model and part information as needed.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                What areas do you coordinate services in?
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                We coordinate services across all of Toronto and the Greater Toronto Area including Etobicoke, Mississauga, Scarborough, Brampton, Vaughan, Markham, and Richmond Hill.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                How long do most contractor repairs take?
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                Most common repairs are completed in 1-2 hours by contractors in our network. Complex issues might require ordering specific parts, but contractors provide clear timelines during diagnostics.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY SECTION -->
+      <section id="gallery">
+        <div class="container">
+          <h2 class="section-title">Educational Demonstration Gallery</h2>
+          <p class="section-muted">
+            Training examples and educational content demonstrating typical repair scenarios.
+          </p>
+
+          <div class="grid grid-3 gallery-grid">
+            <div class="card gallery-card" onclick="openGalleryModal(0)">
+              <img src="images/fridge-repair.jpg" alt="Fridge repair demonstration" class="gallery-img" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-icon">🔍</div>
+                <div class="gallery-title">Fridge Repair Demo</div>
+              </div>
+            </div>
+            <div class="card gallery-card" onclick="openGalleryModal(1)">
+              <img src="images/washer-repair.jpg" alt="Washer repair demonstration" class="gallery-img" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-icon">🔍</div>
+                <div class="gallery-title">Washer service coordination Demo</div>
+              </div>
+            </div>
+            <div class="card gallery-card" onclick="openGalleryModal(2)">
+              <img src="images/oven-repair.jpg" alt="Oven repair demonstration" class="gallery-img" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-icon">🔍</div>
+                <div class="gallery-title">Oven Repair Demo</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="educational-notice">
+            All videos and photos on this website are demonstrations or educational examples. The person shown performing work is not providing repair services on behalf of LFI. All actual repair work for LFI customers is performed exclusively by independent independent contractors.
+          </div>
+        </div>
+      </section>
+
+      <!-- VIDEO SECTION -->
+      <section id="videos">
+        <div class="container">
+          <div class="video-section">
+            <h2 class="section-title">Educational Repair Demonstrations</h2>
+            <p class="section-muted">
+              Training videos demonstrating common repair procedures for educational purposes.
+            </p>
+
+            <div class="videos-grid">
+              <div class="video-card">
+                <div class="video-wrapper">
+                  <iframe
+                    src="https://www.youtube.com/embed/5JS44woDW1Y"
+                    title="LFI Appliance Repair – educational example 1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    loading="lazy"></iframe>
+                </div>
+              </div>
+              <div class="video-card">
+                <div class="video-wrapper">
+                  <iframe
+                    src="https://www.youtube.com/embed/fbWTVxtjZgk"
+                    title="LFI Appliance Repair – educational example 2"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    loading="lazy"></iframe>
+                </div>
+              </div>
+              <div class="video-card">
+                <div class="video-wrapper">
+                  <iframe
+                    src="https://www.youtube.com/embed/X64SEbDKfXA"
+                    title="LFI Appliance Repair – educational example 3"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    loading="lazy"></iframe>
+                </div>
+              </div>
+            </div>
+            
+            <div class="educational-notice">
+              All videos and photos on this website are demonstrations or educational examples. The person shown performing work is not providing repair services on behalf of LFI. All actual repair work for LFI customers is performed exclusively by independent independent contractors.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE AREAS -->
+      <section id="service-areas">
+        <div class="container">
+          <h2 class="section-title">Service Areas</h2>
+          <p class="section-muted">
+            We coordinate services across Toronto and the entire Greater Toronto Area with reliable appliance repair technicians.
+          </p>
+          
+          <div class="areas-carousel-section">
+            <div class="areas-carousel">
+              <div class="areas-track" id="areas-track">
+                <!-- Slide 1 -->
+                <div class="area-slide">
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/downtown-toronto.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Downtown Toronto</div>
+                      <div class="area-card-region">Central Toronto</div>
+                    </div>
+                  </div>
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/midtown-toronto.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Midtown</div>
+                      <div class="area-card-region">Central Toronto</div>
+                    </div>
+                  </div>
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/the-beaches.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">The Beaches</div>
+                      <div class="area-card-region">Central Toronto</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="area-slide">
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/liberty-village.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Liberty Village</div>
+                      <div class="area-card-region">Central Toronto</div>
+                    </div>
+                  </div>
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/etobicoke.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Etobicoke</div>
+                      <div class="area-card-region">West GTA</div>
+                    </div>
+                  </div>
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/mississauga.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Mississauga</div>
+                      <div class="area-card-region">West GTA</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="area-slide">
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/oakville.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Oakville</div>
+                      <div class="area-card-region">West GTA</div>
+                    </div>
+                  </div>
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/brampton.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Brampton</div>
+                      <div class="area-card-region">West GTA</div>
+                    </div>
+                  </div>
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/north-york.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">North York</div>
+                      <div class="area-card-region">North GTA</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="area-slide">
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/vaughan.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Vaughan</div>
+                      <div class="area-card-region">North GTA</div>
+                    </div>
+                  </div>
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/richmond-hill.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Richmond Hill</div>
+                      <div class="area-card-region">North GTA</div>
+                    </div>
+                  </div>
+                  <div class="area-card">
+                    <div class="area-card-image" style="background-image: url('images/markham.jpg')"></div>
+                    <div class="area-card-content">
+                      <div class="area-card-name">Markham</div>
+                      <div class="area-card-region">North GTA</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="areas-nav">
+                <button class="areas-arrow" onclick="moveAreas(-1)">‹</button>
+                <button class="areas-arrow" onclick="moveAreas(1)">›</button>
+              </div>
+
+              <div class="areas-dots" id="areas-dots">
+                <div class="areas-dot active" data-index="0"></div>
+                <div class="areas-dot" data-index="1"></div>
+                <div class="areas-dot" data-index="2"></div>
+                <div class="areas-dot" data-index="3"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="smart-form">
+            <div class="form-quick-options">
+              <div class="quick-option" onclick="fillForm('fridge')">
+                <span>❄️</span>
+                <span>Fridge Issues</span>
+              </div>
+              <div class="quick-option" onclick="fillForm('washer')">
+                <span>💧</span>
+                <span>Washer Issues</span>
+              </div>
+              <div class="quick-option" onclick="fillForm('oven')">
+                <span>🔥</span>
+                <span>Oven Issues</span>
+              </div>
+              <div class="quick-option" onclick="fillForm('other')">
+                <span>🔧</span>
+                <span>Other Appliances</span>
+              </div>
+            </div>
+
+            <div class="cta-row">
+              <button class="btn btn-booking" onclick="openBookingModal()">
+                📅 Request Technician Connection
+              </button>
+              <a class="btn btn-primary" href="https://wa.me/14374997971?text=Hi%20Leo,%20I%20need%20appliance%20repair%20coordination" target="_blank" rel="noopener noreferrer">
+                WhatsApp Us
+              </a>
+              <a class="btn btn-outline" href="tel:+14374997971">
+                Call Directly
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Mobile CTA Bar -->
+    <div class="mobile-cta-bar" id="mobile-cta-bar">
+      <a href="tel:+14374997971" class="btn btn-outline">📞 Call</a>
+      <a href="https://wa.me/14374997971" class="btn btn-primary">💬 WhatsApp</a>
+      <button class="btn btn-booking" onclick="openBookingModal()">📅 Request</button>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-info">
+            © <span id="year"></span> LFI Appliance Repair Coordination & Support · All rights reserved.
+            <div class="footer-disclaimer" style="margin-bottom: 15px; border: 1px solid rgba(255,255,255,0.2); padding: 15px; border-radius: 8px;">
+              <strong>Legal Disclaimer:</strong> LFI Appliance Repair provides coordination, customer support, scheduling, and educational content only.<br><br>
+              All appliance repair work for LFI customers is performed exclusively by independent third-party contractors. LFI does not provide repair services and is not a contractor.<br><br>
+              All videos and photos on this website represent demonstration or educational content showing typical repair procedures.<br><br>
+              By contacting LFI you agree that LFI may connect you with an independent technician.
+            </div>
+            <div class="footer-disclaimer">
+              Information on this site is for general guidance. Final diagnostics and repair costs are confirmed by contractors.<br>
+              We respect your privacy - personal information is never shared.<br>
+              Legal business name: LFI Appliance Repair Inc. (Ontario)
+            </div>
+            <div class="view-counter">
+              Page views: <span id="view-count">0</span>
+            </div>
+          </div>
+          <div class="social-links">
+            <a class="social-link" href="https://instagram.com/lfiappliancerepair" target="_blank" rel="noopener noreferrer">
+              <span class="social-icon">📸</span><span>Instagram</span>
+            </a>
+            <a class="social-link" href="https://www.facebook.com/profile.php?id=61571394611760" target="_blank" rel="noopener noreferrer">
+              <span class="social-icon">👍</span><span>Facebook</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modals -->
+  <div class="modal" id="contact-modal">
+    <div class="modal-backdrop" onclick="closeModal()"></div>
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" onclick="closeModal()" aria-label="Close">×</button>
+      <div class="modal-title">Request Contractor Estimate</div>
+      <div class="modal-sub">
+        Tell us about your appliance issue for a quick estimate from our network.
+      </div>
+
+      <form name="callback" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/" onsubmit="return validateForm(this)">
+        <input type="hidden" name="form-name" value="callback" />
+        <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+        <div class="form-grid">
+          <div>
+            <div class="field-label">Name</div>
+            <input class="input" type="text" name="name" placeholder="Your name" required />
+          </div>
+          <div>
+            <div class="field-label">Phone</div>
+            <input class="input" type="tel" name="phone" placeholder="+1 (437) 499-7971" required />
+          </div>
+          <div>
+            <div class="field-label">Appliance Issue</div>
+            <textarea class="textarea" name="message" placeholder="Describe the problem..." id="issue-description"></textarea>
+          </div>
+        </div>
+
+        <div class="form-notice">
+          Submitting this form allows LFI to connect you with an independent third-party technicians. LFI does not perform repair work.
+        </div>
+
+        <button class="btn btn-primary" type="submit">Request Contractor Estimate</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Booking Modal -->
+  <div class="modal" id="booking-modal">
+    <div class="modal-backdrop" onclick="closeBookingModal()"></div>
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" onclick="closeBookingModal()" aria-label="Close">×</button>
+      <div class="modal-title">📅 Request Technician Connection</div>
+      <div class="modal-sub">
+        Provide details to check contractor availability in your area
+      </div>
+
+      <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/" onsubmit="return validateBookingForm(this)">
+        <input type="hidden" name="form-name" value="booking" />
+        <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+        <div class="form-grid">
+          <div>
+            <div class="field-label">Your Name *</div>
+            <input class="input" type="text" name="name" placeholder="John Smith" required />
+          </div>
+          <div>
+            <div class="field-label">Phone Number *</div>
+            <input class="input" type="tel" name="phone" placeholder="+1 (437) 499-7971" required />
+          </div>
+          <div>
+            <div class="field-label">Preferred Date *</div>
+            <input class="input" type="date" name="date" min="" required />
+          </div>
+          <div>
+            <div class="field-label">Preferred Time *</div>
+            <select class="input" name="time" required>
+              <option value="">Select time</option>
+              <option value="9:00-11:00">9:00 AM - 11:00 AM</option>
+              <option value="11:00-13:00">11:00 AM - 1:00 PM</option>
+              <option value="13:00-15:00">1:00 PM - 3:00 PM</option>
+              <option value="15:00-17:00">3:00 PM - 5:00 PM</option>
+              <option value="17:00-19:00">5:00 PM - 7:00 PM</option>
+            </select>
+          </div>
+          <div>
+            <div class="field-label">Appliance Type *</div>
+            <select class="input" name="appliance" required>
+              <option value="">Select appliance</option>
+              <option value="refrigerator">Refrigerator</option>
+              <option value="washer">Washer</option>
+              <option value="dryer">Dryer</option>
+              <option value="dishwasher">Dishwasher</option>
+              <option value="oven">Oven/Stove</option>
+              <option value="microwave">Microwave</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div>
+            <div class="field-label">Issue Description</div>
+            <textarea class="textarea" name="issue" placeholder="Describe the problem..."></textarea>
+          </div>
+        </div>
+
+        <div class="form-notice">
+          Submitting this form allows LFI to connect you with an independent third-party technicians. LFI does not perform repair work.
+        </div>
+
+        <div style="background: rgba(74, 235, 106, 0.1); padding: 12px; border-radius: 8px; margin: 10px 0; font-size: 12px;">
+          </div>
+
+        <button class="btn btn-booking" type="submit" style="width: 100%;">
+          Request Technician Connection
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // View counter
+    let viewCount = localStorage.getItem('viewCount') || 0;
+    viewCount++;
+    localStorage.setItem('viewCount', viewCount);
+    document.getElementById('view-count').textContent = viewCount;
+
+    // Set min date for booking
+    const dateInput = document.querySelector('input[type="date"]');
+    if (dateInput) {
+      const today = new Date().toISOString().split('T')[0];
+      dateInput.min = today;
+    }
+
+    // Modal functions
+    function openModal() {
+      document.getElementById('contact-modal').classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('contact-modal').classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    function openBookingModal() {
+      document.getElementById('booking-modal').classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeBookingModal() {
+      document.getElementById('booking-modal').classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    function validateBookingForm(form) {
+      const phone = form.querySelector('input[type="tel"]');
+      const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+      
+      if (phone && !phoneRegex.test(phone.value.replace(/\D/g, ''))) {
+        alert('Please enter a valid phone number');
+        phone.focus();
+        return false;
+      }
+      
+      alert('Thank you! Your request has been submitted. We will call you to check contractor availability.');
+      return true;
+    }
+
+    // FAQ functionality
+    function toggleFAQ(element) {
+      const faqItem = element.parentElement;
+      faqItem.classList.toggle('active');
+    }
+
+    // Areas carousel
+    let areasIndex = 0;
+    const totalAreasSlides = 4;
+
+    function updateAreasCarousel() {
+      const track = document.getElementById('areas-track');
+      if (!track) return;
+      track.style.transform = `translateX(-${areasIndex * 100}%)`;
+      
+      const dots = document.querySelectorAll('.areas-dot');
+      dots.forEach(dot => dot.classList.remove('active'));
+      if (dots[areasIndex]) dots[areasIndex].classList.add('active');
+    }
+
+    function moveAreas(direction) {
+      areasIndex = (areasIndex + direction + totalAreasSlides) % totalAreasSlides;
+      updateAreasCarousel();
+    }
+
+    // Initialize on load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize areas carousel dots
+      const dotsContainer = document.getElementById('areas-dots');
+      if (dotsContainer) {
+        dotsContainer.addEventListener('click', function(e) {
+          if (e.target.classList.contains('areas-dot')) {
+            areasIndex = parseInt(e.target.getAttribute('data-index'));
+            updateAreasCarousel();
+          }
+        });
+      }
+      updateAreasCarousel();
+      
+      // Mobile CTA bar hide on scroll to footer
+      const mobileCta = document.getElementById('mobile-cta-bar');
+      const footer = document.querySelector('footer');
+      
+      if (mobileCta && footer) {
+        window.addEventListener('scroll', function() {
+          const footerRect = footer.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+          
+          if (footerRect.top < windowHeight - 100) {
+            mobileCta.classList.add('hidden');
+          } else {
+            mobileCta.classList.remove('hidden');
+          }
+        });
+      }
+    });
+
+    // Cost estimator
+    function updateEstimate() {
+      const appliance = document.getElementById('appliance-type').value;
+      const costRanges = {
+        fridge: "Quoted by technician",
+        washer: "Quoted by technician", 
+        dryer: "Quoted by technician",
+        dishwasher: "Quoted by technician",
+        oven: "Quoted by technician"
+      };
+      document.getElementById('cost-range').textContent = costRanges[appliance] || "Quoted by technician";
+    }
+
+    // Smart form filling
+    function fillForm(applianceType) {
+      const issues = {
+        fridge: "Fridge not cooling properly, making strange noises, water leakage",
+        washer: "Washer not spinning, leaking water, showing error codes, not draining",
+        oven: "Oven not heating, temperature issues, error codes, burners not working", 
+        other: "Appliance not working properly, need professional diagnosis"
+      };
+      document.getElementById('issue-description').value = issues[applianceType] || '';
+      openModal();
+    }
+
+    // Form validation
+    function validateForm(form) {
+      const phone = form.querySelector('input[type="tel"]');
+      const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+      
+      if (phone && !phoneRegex.test(phone.value.replace(/\D/g, ''))) {
+        alert('Please enter a valid phone number');
+        phone.focus();
+        return false;
+      }
+      return true;
+    }
+
+    // Close modals on ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+        closeBookingModal();
+      }
+    });
+  </script>
+</body>
+</html>
